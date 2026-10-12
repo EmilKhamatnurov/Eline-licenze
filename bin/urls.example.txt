@@ -1,0 +1,5 @@
+# Скопируйте в bin/urls.txt (он в .gitignore) и перечислите старые адреса.
+# Формат: путь [ожидаемый финальный путь]
+/old-page/                /new-page/
+/Uslugi/                  /uslugi/
+//uslugi//

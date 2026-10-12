@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Внедрение юридического ИИ</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0;font-family:'Manrope',system-ui,sans-serif;background:#F8F3EF;color:#20171A}
+a{color:inherit;text-decoration:none}
+.nav:hover{color:#6E1428}
+.btn{transition:background .15s}
+.btn:hover{background:#3E0A17 !important}
+input,select{font-family:inherit}
+input:focus,select:focus,button:focus-visible,a:focus-visible{outline:3px solid #D9B36C;outline-offset:2px}
+</style>
+</helmet>
+
+<div style="--brand:{{brand}};--brand-dark:{{brandDark}};--tint:#F6ECEE;--ink:#20171A;--muted:#5E5256;--line:#E6DADD;--gold:#D9B36C;background:#F8F3EF;color:#20171A;font-size:16px;line-height:1.55">
+
+<header style="background:#fff;border-bottom:1px solid var(--line)">
+<div style="max-width:1200px;margin:0 auto;padding:16px 32px;display:flex;flex-wrap:wrap;gap:16px 36px;align-items:center;justify-content:space-between">
+<a href="Main.dc.html" style="display:flex;align-items:center;gap:12px"><span style="width:44px;height:44px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 3px #fff,0 0 0 4px var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700">§</span><span style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--brand-dark);line-height:1">[НАЗВАНИЕ]</span></a>
+<nav aria-label="Основное меню" style="display:flex;flex-wrap:wrap;gap:8px 28px;font-weight:600;font-size:15px">
+<a class="nav" href="Licenses.dc.html">Лицензирование</a><a class="nav" href="Outsourcing.dc.html">Юрист на аутсорсе</a><a class="nav" href="Documents.dc.html">Документы</a><a class="nav" href="LegalAI.dc.html" style="color:var(--brand)">Юридический ИИ</a><a class="nav" href="About.dc.html">О компании</a><a class="nav" href="Contacts.dc.html">Контакты</a>
+</nav>
+<div style="display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center"><span style="font-weight:700">[ТЕЛЕФОН]</span><a class="btn" href="#lead" style="background:var(--brand);color:#fff;font-weight:700;padding:13px 22px;border-radius:10px">Консультация</a></div>
+</div>
+</header>
+
+<section style="position:relative;overflow:hidden;background:var(--brand-dark);color:#fff">
+<svg aria-hidden="true" width="800" height="800" viewBox="0 0 800 800" style="position:absolute;right:-200px;top:-120px"><g fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="2"><circle cx="400" cy="400" r="380"></circle><circle cx="400" cy="400" r="320"></circle><circle cx="400" cy="400" r="260"></circle><circle cx="400" cy="400" r="200"></circle><circle cx="400" cy="400" r="140"></circle></g></svg>
+<div style="position:relative;max-width:1200px;margin:0 auto;padding:28px 32px 72px">
+<nav aria-label="Хлебные крошки" style="font-size:14px;color:#D9BFC5;display:flex;flex-wrap:wrap;gap:6px 10px"><a href="Main.dc.html">Главная</a><span>/</span><span style="color:#fff">Юридический ИИ</span></nav>
+<div style="margin-top:32px;max-width:780px">
+<p style="margin:0 0 14px;font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--gold)">ПИЛОТНОЕ НАПРАВЛЕНИЕ</p>
+<h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:58px;line-height:1.02;text-wrap:balance">Внедрение юридического ИИ в вашей компании</h1>
+<p style="margin:20px 0 0;font-size:18px;color:#EBD3D8">Подберём ИИ-инструменты под вашу юридическую работу, настроим их и обучим команду. Каждый результат проверяет юрист.</p>
+<div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:12px"><a href="#lead" style="background:#fff;color:var(--brand-dark);font-weight:700;padding:16px 28px;border-radius:10px">Записаться на обсуждение</a><a href="#cases" style="border:1px solid rgba(255,255,255,.5);font-weight:700;padding:16px 28px;border-radius:10px">Что можно автоматизировать</a></div>
+</div>
+</div>
+</section>
+
+<!-- USE CASES -->
+<section id="cases" style="padding:88px 0">
+<div style="max-width:1200px;margin:0 auto;padding:0 32px">
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:56px;line-height:1;font-weight:700;color:var(--brand-dark)">Где ИИ экономит время юристу</h2>
+<div role="tablist" aria-label="Сценарии" style="margin-top:28px;display:flex;flex-wrap:wrap;gap:10px">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="4"><button role="tab" onClick="{{t.pick}}" style="{{t.style}}">{{t.label}}</button></sc-for>
+</div>
+<div style="margin-top:24px;display:flex;flex-wrap:wrap;gap:32px;align-items:stretch">
+<div style="flex:1 1 380px;min-width:0;background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px">
+<h3 style="margin:0;font-size:24px;line-height:1.25">{{cur.title}}</h3>
+<p style="margin:12px 0 0;color:var(--muted);font-size:16.5px">{{cur.text}}</p>
+<ul style="list-style:none;margin:20px 0 0;padding:0;display:grid;gap:10px">
+<sc-for list="{{cur.points}}" as="p" hint-placeholder-count="3"><li style="display:flex;gap:12px"><span style="flex:none;margin-top:9px;width:7px;height:7px;border-radius:50%;background:var(--brand)"></span><span>{{p}}</span></li></sc-for>
+</ul>
+</div>
+<div style="flex:1 1 380px;min-width:0;background:var(--tint);border-radius:16px;padding:32px;display:grid;gap:14px;align-content:start">
+<p style="margin:0;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--brand)">ИЛЛЮСТРАЦИЯ СЦЕНАРИЯ · НЕ РЕАЛЬНЫЙ ИНТЕРФЕЙС</p>
+<div style="background:#fff;border-radius:12px;padding:16px 18px"><div style="font-size:13px;font-weight:700;color:var(--muted)">ВХОД</div><div style="margin-top:4px">{{cur.input}}</div></div>
+<div style="background:#fff;border-radius:12px;padding:16px 18px;border-left:0;border:1px solid var(--brand)"><div style="font-size:13px;font-weight:700;color:var(--brand)">РЕЗУЛЬТАТ ИИ</div><div style="margin-top:4px">{{cur.output}}</div></div>
+<div style="background:var(--brand-dark);color:#fff;border-radius:12px;padding:14px 18px;font-size:15px">Далее: проверка и решение юриста</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- STAGES -->
+<section style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:88px 0">
+<div style="max-width:1200px;margin:0 auto;padding:0 32px">
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:56px;line-height:1;font-weight:700;color:var(--brand-dark)">Как проходит внедрение</h2>
+<div style="margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:20px">
+<sc-for list="{{stages}}" as="s" hint-placeholder-count="5"><div style="border-top:1px solid #C9B3B8;padding-top:18px"><div style="font-family:'Cormorant Garamond',serif;font-size:60px;font-weight:700;color:var(--brand);line-height:.9">{{s.n}}</div><h3 style="margin:12px 0 6px;font-size:19px">{{s.title}}</h3><p style="margin:0;color:var(--muted);font-size:15px">{{s.text}}</p><p style="margin:8px 0 0;font-weight:700;font-size:14px;color:var(--brand)">{{s.term}}</p></div></sc-for>
+</div>
+</div>
+</section>
+
+<!-- SAFETY -->
+<section style="padding:88px 0">
+<div style="max-width:1200px;margin:0 auto;padding:0 32px">
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:56px;line-height:1;font-weight:700;color:var(--brand-dark)">Безопасность и ответственность</h2>
+<div style="margin-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:20px">
+<sc-for list="{{safety}}" as="x" hint-placeholder-count="3"><div style="border-top:1px solid var(--line);padding:22px 4px 8px"><h3 style="margin:0 0 6px;font-size:20px">{{x.title}}</h3><p style="margin:0;color:var(--muted);font-size:15.5px">{{x.text}}</p></div></sc-for>
+</div>
+</div>
+</section>
+
+<section id="lead" style="background:var(--brand);color:#fff;padding:80px 0">
+<div style="max-width:1200px;margin:0 auto;padding:0 32px;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+<div style="flex:1 1 420px;min-width:0"><h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:50px;line-height:1.02;font-weight:700;text-wrap:balance">Обсудим, что можно автоматизировать у вас</h2><p style="margin:16px 0 0;color:#F1DDE1;font-size:17px">Короткий разбор: какие задачи подходят, что потребуется и сколько это займёт.</p></div>
+<form style="flex:1 1 360px;max-width:460px;background:#fff;color:var(--ink);border-radius:18px;padding:32px;display:grid;gap:16px">
+<div style="display:grid;gap:6px"><label for="b-name" style="font-size:14px;font-weight:600">Имя</label><input id="b-name" type="text" style="height:48px;border:1px solid #CDBFC3;border-radius:10px;padding:0 14px;font-size:16px"></div>
+<div style="display:grid;gap:6px"><label for="b-phone" style="font-size:14px;font-weight:600">Телефон</label><input id="b-phone" type="tel" placeholder="+7 (___) ___-__-__" style="height:48px;border:1px solid #CDBFC3;border-radius:10px;padding:0 14px;font-size:16px"></div>
+<div style="display:grid;gap:6px"><label for="b-co" style="font-size:14px;font-weight:600">Компания и размер юридической службы</label><input id="b-co" type="text" style="height:48px;border:1px solid #CDBFC3;border-radius:10px;padding:0 14px;font-size:16px"></div>
+<button class="btn" type="button" style="height:54px;border:0;border-radius:10px;background:var(--brand);color:#fff;font-size:17px;font-weight:700;cursor:pointer">Отправить заявку</button>
+<p style="margin:0;font-size:12.5px;color:var(--muted)">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+</form>
+</div>
+</section>
+
+<footer style="background:#1A0A0F;color:#CDB9BE;padding:36px 0;font-size:15px"><div style="max-width:1200px;margin:0 auto;padding:0 32px;display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between"><span>[ООО «НАЗВАНИЕ»] · ИНН [XXXXXXXXXX]</span><a href="Main.dc.html" style="text-decoration:underline">На главную</a></div></footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brand":{"editor":"color","default":"#6E1428","options":["#6E1428","#7B1E3A","#5C0F24","#8A2A3B"]},"brandDark":{"editor":"color","default":"#3E0A17","options":["#3E0A17","#3F0B18","#55121F"]},"$preview":{"width":1440,"height":3900}}'>
+const CASES = [
+  { label: 'Проверка договоров', title: 'Проверка договоров на риски', text: 'ИИ сверяет входящий договор с вашими стандартами и подсвечивает спорные условия. Юрист принимает решение.', points: ['Поиск невыгодных условий и пропущенных пунктов', 'Сравнение с вашим эталонным договором', 'Сводка правок для согласования'], input: 'Договор поставки на [N] страниц от контрагента.', output: 'Найдены условия о неустойке и сроках оплаты, отличающиеся от вашего стандарта. Предложены формулировки.' },
+  { label: 'Типовые документы', title: 'Подготовка типовых документов', text: 'Сборка документов из ваших шаблонов и данных: быстрее, без ручного переноса реквизитов.', points: ['Заполнение шаблонов по данным клиента', 'Единый стиль и терминология', 'Контроль комплектности пакета'], input: 'Данные о контрагенте и параметры сделки.', output: 'Черновик договора и приложений по вашему шаблону, пропуски отмечены.' },
+  { label: 'База знаний', title: 'База знаний компании', text: 'Быстрый поиск по внутренним регламентам, прошлым договорам и позициям компании.', points: ['Ответы со ссылками на источник', 'Доступ по ролям и подразделениям', 'Обновление при изменении документов'], input: 'Вопрос сотрудника: «Какой срок оплаты у нас по умолчанию?»', output: 'Ответ с ссылкой на регламент и последние договоры. [иллюстрация]' },
+  { label: 'Мониторинг изменений', title: 'Отслеживание изменений законодательства', text: 'Уведомления об изменениях в нормах, которые касаются именно вашей отрасли и лицензий.', points: ['Профиль отрасли и лицензий', 'Краткая выжимка и последствия для бизнеса', 'Передача юристу на оценку'], input: 'Профиль: [ВАШ ВИД ЛИЦЕНЗИИ].', output: 'Сводка изменений за период и рекомендация, что пересмотреть. [иллюстрация]' }
+];
+const STAGES = [
+  { n: '01', title: 'Диагностика', text: 'Изучаем процессы и документы, находим задачи для автоматизации.', term: '[СРОК]' },
+  { n: '02', title: 'Выбор решения', text: 'Подбираем инструменты и требования к данным.', term: '[СРОК]' },
+  { n: '03', title: 'Пилот', text: 'Запускаем на одном процессе и измеряем результат.', term: '[СРОК]' },
+  { n: '04', title: 'Обучение', text: 'Учим команду работать с инструментом и проверять результат.', term: '[СРОК]' },
+  { n: '05', title: 'Масштабирование', text: 'Расширяем на другие процессы и сопровождаем.', term: '[СРОК]' }
+];
+const SAFETY = [
+  { title: 'Юрист принимает решения', text: 'ИИ готовит черновик и находит риски. Итоговое решение и ответственность остаются за специалистом.' },
+  { title: 'Защита данных', text: 'Определяем, какие данные можно передавать в какие системы. Варианты размещения: [УТОЧНИТЬ]' },
+  { title: 'Прозрачность результата', text: 'Ответы со ссылками на источники, чтобы их можно было быстро проверить.' }
+];
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { tab: 0 };
+  }
+  renderVals() {
+    const s = this.state;
+    const on = 'min-height:44px;padding:10px 18px;border-radius:999px;border:1px solid #6E1428;background:#6E1428;color:#fff;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer';
+    const off = 'min-height:44px;padding:10px 18px;border-radius:999px;border:1px solid #CDBFC3;background:#fff;color:#20171A;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer';
+    return {
+      brand: this.props.brand ?? '#6E1428',
+      brandDark: this.props.brandDark ?? '#3E0A17',
+      tabs: CASES.map((c, i) => ({ label: c.label, style: i === s.tab ? on : off, pick: () => this.setState({ tab: i }) })),
+      cur: CASES[s.tab],
+      stages: STAGES,
+      safety: SAFETY
+    };
+  }
+}
+</script>
+</body>
+</html>

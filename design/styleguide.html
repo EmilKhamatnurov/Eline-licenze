@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Стайлгайд — токены темы</title>
+<!-- Те же файлы, что подключает тема. Открывается без WordPress. -->
+<link rel="stylesheet" href="../theme-starter/assets/css/fonts.css">
+<link rel="stylesheet" href="../theme-starter/assets/css/tokens.css">
+<link rel="stylesheet" href="../theme-starter/assets/css/base.css">
+<link rel="stylesheet" href="../theme-starter/assets/css/ui.css">
+<style>
+	/* Только для этой страницы */
+	.sg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr)); gap: var(--space-4); }
+	.sg-swatch { border: 1px solid var(--line); border-radius: var(--radius-card); overflow: hidden; background: var(--paper); font-size: var(--fs-small); }
+	.sg-swatch i { display: block; height: 64px; }
+	.sg-swatch span { display: block; padding: var(--space-2) var(--space-3); }
+	.sg-row { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); align-items: baseline; padding-block: var(--space-4); border-bottom: 1px solid var(--line); }
+	.sg-row code { flex: 0 0 9rem; font-size: var(--fs-small); color: var(--muted); }
+	.sg-row > :last-child { flex: 1 1 18rem; margin: 0; }
+	.sg-box { background: var(--tint); outline: 1px dashed var(--brand); }
+	.sg-box > div { background: var(--paper); padding: var(--space-4); }
+	.sg-radii { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+	.sg-radii div { width: 96px; height: 64px; display: grid; place-items: center; background: var(--paper); border: 1.5px solid var(--brand); font-size: var(--fs-small); }
+	.sg-focus { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; }
+	.sg-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: var(--space-5); max-width: 860px; }
+</style>
+</head>
+<body>
+<main>
+	<section class="sky-section">
+		<div class="sky-container">
+			<p class="t-caps">Стайлгайд · не для публикации</p>
+			<h1 class="t-display">Лицензирование под ключ</h1>
+			<p>Основной текст Manrope 16→17, межстрочный 1.55. Цена «от [ЦЕНА] ₽», срок «[СРОК] дней», № лицензии — «—» и «§».</p>
+		</div>
+	</section>
+
+	<section class="sky-section sky-section--paper">
+		<div class="sky-container">
+			<h2>Цвета</h2>
+			<div class="sg-grid" id="swatches"></div>
+		</div>
+	</section>
+
+	<section class="sky-section">
+		<div class="sky-container">
+			<h2>Шкала типографики</h2>
+			<div class="sg-row"><code>--fs-display</code><p class="t-display">Лицензия МЧС</p></div>
+			<div class="sg-row"><code>--fs-h1 · h1</code><p class="t-h1">Медицинская деятельность</p></div>
+			<div class="sg-row"><code>--fs-h2 · h2</code><p class="t-h2">Этапы работы</p></div>
+			<div class="sg-row"><code>--fs-h2-compact</code><p class="t-h2-compact">Требования к соискателю</p></div>
+			<div class="sg-row"><code>--fs-h3 · h3</code><p class="t-h3">Юрист на аутсорсе</p></div>
+			<div class="sg-row"><code>--fs-body</code><p>Подготовим документы и сопроводим проверку до получения лицензии.</p></div>
+			<div class="sg-row"><code>--fs-secondary</code><p class="t-secondary">Вторичный текст: пояснения к услугам и тарифам.</p></div>
+			<div class="sg-row"><code>--fs-small</code><p class="t-small">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой обработки персональных данных</a>.</p></div>
+			<div class="sg-row"><code>--fs-numeral</code><p style="font-family: var(--font-display); font-size: var(--fs-numeral); line-height: 1; color: var(--brand);">01 <span style="color: var(--numeral-soft)">02</span></p></div>
+		</div>
+	</section>
+
+	<section class="sky-section is-dark">
+		<div class="sky-container">
+			<h2>Тёмная секция</h2>
+			<p>Белый текст на <code>--brand-dark</code>. Золото — только акцент на тёмном: <span class="t-caps" style="color: var(--gold)">Скоро</span></p>
+		</div>
+	</section>
+
+	<section class="sky-section sky-section--paper">
+		<div class="sky-container">
+			<h2>Кнопки</h2>
+			<p class="t-secondary">Наведите курсор и нажмите Tab: hover темнеет, фокус — золотая обводка 3 px.</p>
+			<div class="sg-focus">
+				<a class="btn" href="#">Получить консультацию</a>
+				<button class="btn btn--secondary" type="button">Подробнее</button>
+				<a class="btn btn--sm" href="#">Кнопка в шапке</a>
+				<button class="btn" type="button" disabled>Отправка…</button>
+			</div>
+			<div class="is-dark sg-focus" style="margin-top: var(--space-5); padding: var(--space-5); border-radius: var(--radius-card)">
+				<a class="btn btn--light" href="#">Все виды лицензий</a>
+				<button class="btn btn--gold" type="button">Получить консультацию</button>
+			</div>
+
+			<h2 style="margin-top: var(--space-7)">Поля формы</h2>
+			<div class="sg-fields">
+				<div class="field">
+					<label class="field__label" for="sg-name">Имя</label>
+					<input class="field__input" id="sg-name" type="text" autocomplete="name">
+				</div>
+				<div class="field field--error">
+					<label class="field__label" for="sg-phone">Телефон</label>
+					<input class="field__input" id="sg-phone" type="tel" value="+7 900" aria-invalid="true" aria-describedby="sg-phone-err">
+					<p class="field__error" id="sg-phone-err">Введите телефон полностью</p>
+				</div>
+				<div class="field">
+					<label class="field__label" for="sg-task">Что нужно (необязательно)</label>
+					<input class="field__input" id="sg-task" type="text" placeholder="Например, лицензия на медицинскую деятельность">
+					<p class="field__hint">Подсказка под полем</p>
+				</div>
+			</div>
+			<p class="form-consent">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой обработки персональных данных</a>.</p>
+			<h2 style="margin-top: var(--space-7)">Радиусы</h2>
+			<div class="sg-radii">
+				<div style="border-radius: var(--radius-control)">control 12</div>
+				<div style="border-radius: var(--radius-card)">card 16</div>
+				<div style="border-radius: var(--radius-form); box-shadow: var(--shadow-form)">form 20</div>
+				<div style="border-radius: var(--radius-pill)">pill</div>
+				<div style="border-radius: var(--radius-round); width: 64px">§</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="sky-section">
+		<h2 class="sky-container">Контейнер</h2>
+		<div class="sky-container sg-box"><div id="container-info">1200 с полями, контент 1136 · поля 16 → 32 от 768 px</div></div>
+	</section>
+</main>
+<script>
+	const tokens = ['brand','brand-dark','tint','ground','paper','ink','muted','line','gold','footer','input-border','step-line','numeral-soft','on-gold','blank-paper','blank-frame','blank-caption'];
+	const cs = getComputedStyle(document.documentElement);
+	document.getElementById('swatches').innerHTML = tokens.map(t =>
+		`<div class="sg-swatch"><i style="background:var(--${t})"></i><span><b>--${t}</b><br>${cs.getPropertyValue('--' + t).trim()}</span></div>`).join('');
+	const box = document.querySelector('.sg-box > div');
+	const show = () => { document.getElementById('container-info').textContent = `контент ${Math.round(box.getBoundingClientRect().width)} px · поля ${getComputedStyle(box.parentElement).paddingLeft}`; };
+	show(); addEventListener('resize', show);
+	document.fonts.ready.then(() => {
+		const loaded = new Set([...document.fonts].filter(f => f.status === 'loaded').map(f => f.family.replace(/"/g, '')));
+		const ok = ['Manrope', 'Cormorant Garamond'].every(f => loaded.has(f));
+		document.title += ok ? ' · шрифты OK' : ' · шрифты НЕ загружены';
+	});
+</script>
+</body>
+</html>

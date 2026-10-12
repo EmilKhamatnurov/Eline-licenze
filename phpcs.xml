@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<ruleset name="7sky starter">
+	<description>WordPress Coding Standards для baseline, темы и конфига проекта.</description>
+
+	<file>baseline</file>
+	<file>theme-starter</file>
+	<file>project</file>
+
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/app/*</exclude-pattern>
+	<exclude-pattern>baseline/legacy-src/*</exclude-pattern>
+
+	<arg name="extensions" value="php"/>
+	<arg name="colors"/>
+	<arg value="sp"/>
+
+	<config name="testVersion" value="8.1-"/>
+	<config name="minimum_wp_version" value="6.5"/>
+
+	<rule ref="PHPCompatibilityWP"/>
+
+	<rule ref="WordPress-Extra">
+		<!-- Короткий синтаксис массивов — стиль проекта. -->
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax"/>
+		<!-- Классы baseline загружаются по PSR-4: Fields.php, а не class-fields.php. -->
+		<exclude name="WordPress.Files.FileName"/>
+		<!-- Строки интерфейса на русском без i18n — сайты одноязычные. -->
+		<exclude name="WordPress.WP.I18n"/>
+	</rule>
+
+	<!-- В примере конфига закомментированные строки — это образцы значений. -->
+	<rule ref="Squiz.PHP.CommentedOutCode">
+		<exclude-pattern>project/*</exclude-pattern>
+	</rule>
+
+	<!-- В template-parts $args — локальная переменная load_template(), а не глобальная. -->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound">
+		<exclude-pattern>theme-starter/template-parts/*</exclude-pattern>
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="sky_"/>
+				<element value="Sky\Baseline"/>
+				<element value="Sky\Starter"/>
+			</property>
+		</properties>
+	</rule>
+</ruleset>

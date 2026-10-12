@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.5/theme.json",
+  "version": 2,
+  "settings": {
+    "color": {
+      "custom": false,
+      "customGradient": false,
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "palette": [
+        { "name": "Бордовый", "slug": "brand", "color": "var(--brand)" },
+        { "name": "Тёмно-бордовый", "slug": "brand-dark", "color": "var(--brand-dark)" },
+        { "name": "Светлый бордовый", "slug": "tint", "color": "var(--tint)" },
+        { "name": "Фон", "slug": "ground", "color": "var(--ground)" },
+        { "name": "Бумага", "slug": "paper", "color": "var(--paper)" },
+        { "name": "Текст", "slug": "ink", "color": "var(--ink)" },
+        { "name": "Вторичный текст", "slug": "muted", "color": "var(--muted)" },
+        { "name": "Линия", "slug": "line", "color": "var(--line)" },
+        { "name": "Золото (только на тёмном)", "slug": "gold", "color": "var(--gold)" }
+      ]
+    },
+    "typography": {
+      "customFontSize": false,
+      "fontFamilies": [
+        { "name": "Manrope", "slug": "text", "fontFamily": "var(--font-text)" },
+        { "name": "Cormorant Garamond (от 26 px)", "slug": "display", "fontFamily": "var(--font-display)" }
+      ],
+      "fontSizes": [
+        { "name": "Мелкий", "slug": "small", "size": "var(--fs-small)" },
+        { "name": "Вторичный", "slug": "secondary", "size": "var(--fs-secondary)" },
+        { "name": "Основной", "slug": "body", "size": "var(--fs-body)" },
+        { "name": "H3", "slug": "h3", "size": "var(--fs-h3)" },
+        { "name": "H2 компактный", "slug": "h2-compact", "size": "var(--fs-h2-compact)" },
+        { "name": "H2", "slug": "h2", "size": "var(--fs-h2)" },
+        { "name": "H1", "slug": "h1", "size": "var(--fs-h1)" },
+        { "name": "H1 главной", "slug": "display", "size": "var(--fs-display)" }
+      ]
+    },
+    "spacing": {
+      "spacingSizes": [
+        { "name": "8", "slug": "20", "size": "var(--space-2)" },
+        { "name": "16", "slug": "40", "size": "var(--space-4)" },
+        { "name": "24", "slug": "50", "size": "var(--space-5)" },
+        { "name": "32", "slug": "60", "size": "var(--space-6)" },
+        { "name": "48", "slug": "70", "size": "var(--space-7)" },
+        { "name": "Секция", "slug": "80", "size": "var(--section-y)" }
+      ]
+    },
+    "layout": {
+      "contentSize": "1136px",
+      "wideSize": "1200px"
+    }
+  }
+}

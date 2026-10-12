@@ -1,0 +1,369 @@
+/*
+ * Каркас: верхняя полоса, шапка, меню, подвал (DESIGN.md §5 «Шапка»; макеты Main, MainMobile).
+ * Брейкпоинты: 768 — появляется верхняя полоса и подпись логотипа; 1024 — меню в строку вместо бургера.
+ */
+
+/* ── Верхняя полоса ── */
+.topbar {
+	display: none;
+	background: var(--brand-dark);
+	color: var(--on-dark-soft);
+	font-size: var(--fs-xs);
+	line-height: 1.4;
+}
+
+.topbar__inner {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-2) 28px;
+	align-items: center;
+	justify-content: space-between;
+	padding-block: 10px;
+}
+
+.topbar__text {
+	margin: 0;
+}
+
+.topbar__contacts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-2) var(--space-5);
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.topbar a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.topbar a:hover {
+	color: var(--white);
+	text-decoration: underline;
+}
+
+.topbar .topbar__phone {
+	color: var(--white);
+	font-weight: var(--fw-bold);
+}
+
+/* ── Шапка ── */
+.site-header {
+	/* Размеры печати и названия — из макетов: телефон 40/27/23, десктоп 44/30/26 */
+	--seal-size: 40px;
+	--seal-font: 1.6875rem;
+	--seal-ring: 2px;
+	--brand-name: 1.4375rem;
+	position: relative;
+	z-index: 20;
+	background: var(--paper);
+	border-bottom: 1px solid var(--line);
+}
+
+.site-header__bar {
+	display: flex;
+	gap: var(--space-4);
+	align-items: center;
+	justify-content: space-between;
+	padding-block: 10px;
+}
+
+.brand {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	min-width: 0;
+	color: inherit;
+	text-decoration: none;
+}
+
+.brand:hover {
+	color: inherit;
+}
+
+.brand__seal {
+	display: grid;
+	flex: none;
+	place-items: center;
+	width: var(--seal-size);
+	height: var(--seal-size);
+	border-radius: var(--radius-round);
+	background: var(--brand);
+	color: var(--white);
+	font-family: var(--font-display);
+	font-size: var(--seal-font);
+	font-weight: var(--fw-bold);
+	line-height: 1;
+	/* Двойной ободок печати */
+	box-shadow: 0 0 0 var(--seal-ring) var(--paper), 0 0 0 calc(var(--seal-ring) + 1px) var(--brand);
+}
+
+.brand__text {
+	display: grid;
+	gap: 6px;
+	min-width: 0;
+}
+
+.brand__name {
+	font-family: var(--font-display);
+	font-size: var(--brand-name);
+	font-weight: var(--fw-bold);
+	line-height: 1;
+	color: var(--brand-dark);
+	overflow-wrap: anywhere;
+}
+
+.brand__tagline {
+	display: none;
+	font-size: var(--fs-micro);
+	font-weight: var(--fw-semibold);
+	letter-spacing: 0.14em;
+	line-height: 1.2;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+
+.site-header__actions {
+	display: flex;
+	flex: none;
+	gap: 6px;
+	align-items: center;
+}
+
+.site-header__cta {
+	display: none;
+}
+
+/* Бургер: иконка меняется по aria-expanded */
+.site-header__toggle .icon--close,
+.site-header__toggle[aria-expanded="true"] .icon--menu {
+	display: none;
+}
+
+.site-header__toggle[aria-expanded="true"] .icon--close {
+	display: block;
+}
+
+/* ── Меню: телефон и планшет ── */
+.site-nav {
+	border-top: 1px solid var(--line);
+	background: var(--paper);
+}
+
+.site-nav__inner {
+	padding-block: var(--space-2) 20px;
+}
+
+.site-nav__list {
+	display: grid;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.site-nav__list a {
+	display: flex;
+	align-items: center;
+	min-height: var(--tap-min);
+	padding-block: 14px;
+	border-bottom: 1px solid var(--line);
+	color: var(--ink);
+	font-size: var(--fs-body);
+	font-weight: var(--fw-bold);
+	line-height: 1.3;
+	text-decoration: none;
+}
+
+.site-nav__list li:last-child a {
+	border-bottom: 0;
+}
+
+.site-nav__list a:hover,
+.site-nav__list :is(.current-menu-item, .current-menu-ancestor, .current_page_parent, .current-page-ancestor) > a {
+	color: var(--brand);
+}
+
+.site-nav__cta {
+	margin-top: var(--space-3);
+}
+
+/* С JS меню — выпадающая панель под шапкой; без JS остаётся списком в потоке */
+.site-header.has-js .site-nav {
+	display: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	left: 0;
+	max-height: calc(100vh - 100%);
+	max-height: calc(100dvh - 100%);
+	overflow-y: auto;
+	border-top: 0;
+	border-bottom: 1px solid var(--line);
+	box-shadow: var(--shadow-menu);
+}
+
+.site-header.has-js.is-open .site-nav {
+	display: block;
+}
+
+/* ── Подвал ── */
+.site-footer {
+	padding-block: 28px 40px;
+	background: var(--footer);
+	color: var(--footer-text);
+	font-size: var(--fs-xs);
+}
+
+.site-footer__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+	gap: var(--space-5) var(--space-6);
+}
+
+.site-footer__title {
+	margin: 0 0 10px;
+	color: var(--white);
+	font-weight: var(--fw-bold);
+}
+
+.site-footer__about {
+	margin: 0;
+}
+
+.site-footer__list {
+	display: grid;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Шаг строк прежний (8 px), но он внутри ссылки: цель нажатия ≥ 24 px (WCAG 2.5.8) */
+.site-footer__list a {
+	display: inline-block;
+	padding-block: var(--space-1);
+}
+
+.site-footer a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.site-footer a:hover {
+	color: var(--white);
+	text-decoration: underline;
+}
+
+.site-footer .site-footer__underline {
+	text-decoration: underline;
+}
+
+/* ── Панель действий на телефоне ── */
+.mobile-bar {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 30;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+	padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom));
+	border-top: 1px solid var(--line);
+	background: var(--paper);
+	box-shadow: var(--shadow-bar);
+}
+
+@media (max-width: 767px) {
+	body {
+		padding-bottom: var(--mobile-bar-space);
+	}
+}
+
+/* ── От 768 ── */
+@media (min-width: 768px) {
+	.topbar {
+		display: block;
+	}
+
+	.mobile-bar {
+		display: none;
+	}
+
+	.brand__tagline {
+		display: block;
+	}
+
+	.site-footer {
+		padding-block: 64px 40px;
+		font-size: var(--fs-ui);
+	}
+}
+
+/* ── От 1024: меню в строку под логотипом ── */
+@media (min-width: 1024px) {
+	.site-header {
+		--seal-size: 44px;
+		--seal-font: 1.875rem;
+		--seal-ring: 3px;
+		--brand-name: 1.625rem;
+	}
+
+	.site-header__bar {
+		gap: var(--space-4) 36px;
+		padding-block: var(--space-4);
+	}
+
+	.brand {
+		gap: var(--space-3);
+	}
+
+	.site-header__cta {
+		display: inline-flex;
+	}
+
+	.site-header__call,
+	.site-header__toggle {
+		display: none;
+	}
+
+	.site-nav,
+	.site-header.has-js .site-nav {
+		display: block;
+		position: static;
+		max-height: none;
+		overflow: visible;
+		border-top: 1px solid var(--line);
+		border-bottom: 0;
+		box-shadow: none;
+	}
+
+	.site-nav__inner {
+		padding-block: 0;
+	}
+
+	.site-nav__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0 28px;
+	}
+
+	.site-nav__list a {
+		min-height: 3rem;
+		padding-block: 0;
+		border-bottom: 0;
+		font-size: var(--fs-ui);
+		font-weight: var(--fw-semibold);
+	}
+
+	/* Активный пункт: цвет --brand и черта снизу — смысл не только цветом */
+	.site-nav__list :is(.current-menu-item, .current-menu-ancestor, .current_page_parent, .current-page-ancestor) > a {
+		box-shadow: inset 0 -2px 0 var(--brand);
+	}
+
+	.site-nav__cta {
+		display: none;
+	}
+}

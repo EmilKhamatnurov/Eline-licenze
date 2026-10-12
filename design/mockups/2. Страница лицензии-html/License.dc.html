@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Страница лицензии</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0;font-family:'Manrope',system-ui,sans-serif;background:#F8F3EF;color:#20171A}
+a{color:inherit;text-decoration:none}
+.nav:hover{color:#6E1428}
+.btn{transition:background .15s}
+.btn:hover{background:#3E0A17 !important}
+.side:hover{background:#F6ECEE}
+.card{transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:0 14px 34px rgba(74,13,27,.14);transform:translateY(-3px)}
+input,select{font-family:inherit}
+input:focus,select:focus,button:focus-visible,a:focus-visible{outline:3px solid #D9B36C;outline-offset:2px}
+</style>
+</helmet>
+
+<div style="--brand:{{brand}};--brand-dark:{{brandDark}};--tint:#F6ECEE;--ink:#20171A;--muted:#5E5256;--line:#E6DADD;--gold:#D9B36C;background:#F8F3EF;color:#20171A;font-size:16px;line-height:1.55">
+
+<!-- HEADER -->
+<header style="background:#fff;border-bottom:1px solid var(--line)">
+<div style="max-width:1200px;margin:0 auto;padding:16px 32px;display:flex;flex-wrap:wrap;gap:16px 36px;align-items:center;justify-content:space-between">
+<a href="Main.dc.html" style="display:flex;align-items:center;gap:12px">
+<span style="width:44px;height:44px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 3px #fff,0 0 0 4px var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700">§</span>
+<span style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--brand-dark);line-height:1">[НАЗВАНИЕ]</span>
+</a>
+<nav aria-label="Основное меню" style="display:flex;flex-wrap:wrap;gap:8px 28px;font-weight:600;font-size:15px">
+<a class="nav" href="Licenses.dc.html" style="color:var(--brand)">Лицензирование</a>
+<a class="nav" href="Main.dc.html#services">Юрист на аутсорсе</a>
+<a class="nav" href="Main.dc.html#services">Документы</a>
+<a class="nav" href="Main.dc.html#ai">Юридический ИИ</a>
+<a class="nav" href="About.dc.html">О компании</a><a class="nav" href="Contacts.dc.html">Контакты</a>
+</nav>
+<div style="display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center"><span style="font-weight:700">[ТЕЛЕФОН]</span><a class="btn" href="#lead" style="background:var(--brand);color:#fff;font-weight:700;padding:13px 22px;border-radius:10px">Консультация</a></div>
+</div>
+</header>
+
+<!-- HERO -->
+<section style="background:radial-gradient(900px 420px at 85% 30%,rgba(217,179,108,.14),transparent 70%),var(--brand-dark);color:#fff">
+<div style="max-width:1200px;margin:0 auto;padding:28px 32px 64px">
+<nav aria-label="Хлебные крошки" style="font-size:14px;color:#D9BFC5;display:flex;flex-wrap:wrap;gap:6px 10px">
+<a href="Main.dc.html">Главная</a><span>/</span><a href="License.dc.html">Лицензирование</a><span>/</span><a href="License.dc.html">Медицина и фарма</a><span>/</span><span style="color:#fff">Медицинская деятельность</span>
+</nav>
+<div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:40px;align-items:center">
+<div style="flex:1 1 520px;min-width:0">
+<h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:58px;line-height:1.02;text-wrap:balance">Лицензия на медицинскую деятельность под ключ</h1>
+<p style="margin:20px 0 0;font-size:18px;color:#EBD3D8;max-width:600px">Подготовим документы, подадим заявление и сопроводим проверку до получения лицензии. Работаем дистанционно в [РЕГИОН / по всей России].</p>
+<div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:16px">
+<div style="border:1px solid rgba(255,255,255,.28);border-radius:12px;padding:14px 20px"><div style="font-size:13px;color:#D9BFC5">Стоимость</div><div style="font-size:24px;font-weight:800">от [ЦЕНА] ₽</div></div>
+<div style="border:1px solid rgba(255,255,255,.28);border-radius:12px;padding:14px 20px"><div style="font-size:13px;color:#D9BFC5">Срок</div><div style="font-size:24px;font-weight:800">от [СРОК] дней</div></div>
+<div style="border:1px solid rgba(255,255,255,.28);border-radius:12px;padding:14px 20px"><div style="font-size:13px;color:#D9BFC5">Консультация</div><div style="font-size:24px;font-weight:800">бесплатно</div></div>
+</div>
+<div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:12px">
+<a class="btn" href="#lead" style="background:#fff;color:var(--brand-dark);font-weight:700;padding:16px 28px;border-radius:10px">Заказать лицензию</a>
+<a href="#tariffs" style="border:1px solid rgba(255,255,255,.5);font-weight:700;padding:16px 28px;border-radius:10px">Сравнить тарифы</a>
+</div>
+</div>
+<form style="flex:1 1 340px;max-width:420px;background:#fff;color:var(--ink);border-radius:18px;padding:28px;display:grid;gap:14px;box-shadow:0 30px 60px rgba(0,0,0,.35)">
+<p style="margin:0;font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;line-height:1.1;color:var(--brand-dark)">Узнайте стоимость для вашего случая</p>
+<div style="display:grid;gap:6px"><label for="a-name" style="font-size:14px;font-weight:600">Имя</label><input id="a-name" type="text" style="height:48px;border:1px solid #CDBFC3;border-radius:10px;padding:0 14px;font-size:16px"></div>
+<div style="display:grid;gap:6px"><label for="a-phone" style="font-size:14px;font-weight:600">Телефон</label><input id="a-phone" type="tel" placeholder="+7 (___) ___-__-__" style="height:48px;border:1px solid #CDBFC3;border-radius:10px;padding:0 14px;font-size:16px"></div>
+<button class="btn" type="button" style="height:52px;border:0;border-radius:10px;background:var(--brand);color:#fff;font-size:17px;font-weight:700;cursor:pointer">Получить расчёт</button>
+<p style="margin:0;font-size:12.5px;color:var(--muted)">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+</form>
+</div>
+</div>
+</section>
+
+<!-- BODY -->
+<div style="max-width:1200px;margin:0 auto;padding:56px 32px 24px;display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+
+<!-- SIDEBAR -->
+<aside style="flex:1 1 260px;max-width:300px;min-width:240px">
+<p style="margin:0 0 10px;font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--brand)">КАТАЛОГ ЛИЦЕНЗИЙ</p>
+<nav aria-label="Каталог лицензий" style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:8px;display:grid;gap:2px;font-weight:600;font-size:15px">
+<a class="side" href="License.dc.html" style="padding:12px 14px;border-radius:8px">Алкоголь</a>
+<a class="side" href="License.dc.html" style="padding:12px 14px;border-radius:8px;background:var(--brand);color:#fff">Медицина и фарма</a>
+<a class="side" href="License.dc.html" style="padding:12px 14px;border-radius:8px">Образование</a>
+<a class="side" href="License.dc.html" style="padding:12px 14px;border-radius:8px">Экология</a>
+<a class="side" href="License.dc.html" style="padding:12px 14px;border-radius:8px">МЧС</a>
+<a class="side" href="License.dc.html" style="padding:12px 14px;border-radius:8px">Транспорт</a>
+<a class="side" href="License.dc.html" style="padding:12px 14px;border-radius:8px">Культура</a>
+<a class="side" href="License.dc.html" style="padding:12px 14px;border-radius:8px">Безопасность</a>
+</nav>
+<div style="margin-top:20px;background:var(--tint);border-radius:14px;padding:20px">
+<p style="margin:0;font-weight:700">Не уверены, что нужна лицензия?</p>
+<p style="margin:6px 0 14px;color:var(--muted);font-size:15px">Проверим бесплатно и скажем, нужна ли она вашему виду деятельности.</p>
+<a class="btn" href="#lead" style="display:block;text-align:center;background:var(--brand);color:#fff;font-weight:700;padding:13px;border-radius:10px">Задать вопрос юристу</a>
+</div>
+</aside>
+
+<!-- CONTENT -->
+<main style="flex:999 1 560px;min-width:0;display:grid;gap:64px">
+
+<section>
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:42px;line-height:1.05;font-weight:700;color:var(--brand-dark)">Когда лицензия обязательна</h2>
+<p style="margin:16px 0 0;font-size:17px;color:var(--ink);text-wrap:pretty">Медицинская деятельность подлежит обязательному лицензированию. Работа без лицензии грозит штрафами, приостановкой деятельности и невозможностью заключать договоры с пациентами и страховыми. [Юристу: уточнить формулировки и размер санкций по действующей редакции закона.]</p>
+<div style="margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:16px">
+<div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px"><p style="margin:0;font-weight:700">Штрафы и проверки</p><p style="margin:6px 0 0;color:var(--muted);font-size:15px">Административная ответственность за деятельность без лицензии.</p></div>
+<div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px"><p style="margin:0;font-weight:700">Остановка бизнеса</p><p style="margin:6px 0 0;color:var(--muted);font-size:15px">Возможна приостановка деятельности до устранения нарушений.</p></div>
+<div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px"><p style="margin:0;font-weight:700">Потеря клиентов</p><p style="margin:6px 0 0;color:var(--muted);font-size:15px">Без лицензии нельзя работать со страховыми и в госпрограммах.</p></div>
+</div>
+</section>
+
+<section>
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:42px;line-height:1.05;font-weight:700;color:var(--brand-dark)">Требования к соискателю</h2>
+<ul style="list-style:none;margin:20px 0 0;padding:0;display:grid;gap:12px">
+<sc-for list="{{reqs}}" as="r" hint-placeholder-count="4">
+<li style="display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6E1428" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:2px"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg><span>{{r}}</span></li>
+</sc-for>
+</ul>
+</section>
+
+<section>
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:42px;line-height:1.05;font-weight:700;color:var(--brand-dark)">Документы</h2>
+<div role="tablist" aria-label="Тип заявителя" style="margin-top:20px;display:flex;flex-wrap:wrap;gap:10px">
+<sc-for list="{{docTabs}}" as="t" hint-placeholder-count="2">
+<button role="tab" onClick="{{t.pick}}" style="{{t.style}}">{{t.label}}</button>
+</sc-for>
+</div>
+<ol style="margin:20px 0 0;padding:0 0 0 22px;display:grid;gap:10px;font-size:16.5px">
+<sc-for list="{{docs}}" as="d" hint-placeholder-count="5"><li style="padding-left:6px">{{d}}</li></sc-for>
+</ol>
+<p style="margin:16px 0 0;color:var(--muted);font-size:15px">Перечень уточняется под ваш регион и вид медицинской помощи. Мы подготовим полный пакет.</p>
+</section>
+
+<section>
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:42px;line-height:1.05;font-weight:700;color:var(--brand-dark)">Этапы получения</h2>
+<div style="margin-top:24px;display:grid;gap:0">
+<sc-for list="{{stages}}" as="s" hint-placeholder-count="5">
+<div style="display:flex;gap:20px;padding-bottom:26px">
+<div style="display:flex;flex-direction:column;align-items:center"><span style="width:40px;height:40px;border-radius:50%;background:var(--brand);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center">{{s.n}}</span><span style="flex:1;width:2px;background:var(--line);margin-top:6px"></span></div>
+<div style="padding-top:6px"><h3 style="margin:0;font-size:19px">{{s.title}}</h3><p style="margin:4px 0 0;color:var(--muted);font-size:15.5px">{{s.text}}</p><p style="margin:6px 0 0;font-weight:700;font-size:14px;color:var(--brand)">{{s.term}}</p></div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section id="tariffs">
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:42px;line-height:1.05;font-weight:700;color:var(--brand-dark)">Стоимость и тарифы</h2>
+<p style="margin:12px 0 0;color:var(--muted)">Цена зависит от региона и состояния вашей компании. Окончательная сумма фиксируется в договоре.</p>
+<div style="margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:20px;align-items:stretch">
+<sc-for list="{{tariffs}}" as="t" hint-placeholder-count="3">
+<div style="{{t.box}}">
+<p style="margin:0;font-weight:700;font-size:19px">{{t.name}}</p>
+<p style="margin:10px 0 0;font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:700;line-height:1">[ЦЕНА] ₽</p>
+<ul style="list-style:none;margin:18px 0 22px;padding:0;display:grid;gap:10px;font-size:15px;flex:1">
+<sc-for list="{{t.list}}" as="x" hint-placeholder-count="3"><li style="display:flex;gap:10px"><span style="flex:none;margin-top:8px;width:6px;height:6px;border-radius:50%;background:currentColor"></span><span>{{x}}</span></li></sc-for>
+</ul>
+<a href="#lead" style="{{t.btn}}">Заказать</a>
+</div>
+</sc-for>
+</div>
+<p style="margin:14px 0 0;color:var(--muted);font-size:14px">Государственная пошлина оплачивается отдельно. [УТОЧНИТЬ размер на дату публикации]</p>
+</section>
+
+<section>
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:42px;line-height:1.05;font-weight:700;color:var(--brand-dark)">Вопросы по этой лицензии</h2>
+<div style="margin-top:24px;border-top:1px solid var(--line)">
+<sc-for list="{{faq}}" as="f" hint-placeholder-count="4">
+<div style="border-bottom:1px solid var(--line)">
+<button onClick="{{f.toggle}}" aria-expanded="{{f.open}}" style="width:100%;min-height:64px;display:flex;justify-content:space-between;align-items:center;gap:16px;border:0;background:none;padding:16px 0;text-align:left;font-family:inherit;font-size:18px;font-weight:700;color:var(--ink);cursor:pointer"><span>{{f.q}}</span><span style="flex:none;font-size:26px;color:var(--brand);line-height:1">{{f.sign}}</span></button>
+<sc-if value="{{f.open}}" hint-placeholder-val="{{ false }}"><p style="margin:0 0 20px;color:var(--muted);max-width:680px">{{f.a}}</p></sc-if>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section>
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:32px;line-height:1.1;font-weight:700;color:var(--brand-dark)">Смежные лицензии</h2>
+<div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:10px">
+<a class="card" href="License.dc.html" style="background:#fff;border:1px solid var(--line);border-radius:999px;padding:11px 18px;font-weight:600;min-height:20px">Фармацевтическая деятельность</a>
+<a class="card" href="License.dc.html" style="background:#fff;border:1px solid var(--line);border-radius:999px;padding:11px 18px;font-weight:600">Обращение с медицинскими отходами</a>
+<a class="card" href="License.dc.html" style="background:#fff;border:1px solid var(--line);border-radius:999px;padding:11px 18px;font-weight:600">Образовательная деятельность</a>
+</div>
+</section>
+
+</main>
+</div>
+
+<!-- LEAD -->
+<section id="lead" style="margin-top:56px;background:var(--brand);color:#fff;padding:80px 0">
+<div style="max-width:1200px;margin:0 auto;padding:0 32px;display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+<div style="flex:1 1 420px;min-width:0">
+<h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:50px;line-height:1.02;font-weight:700;text-wrap:balance">Получим лицензию, пока вы занимаетесь бизнесом</h2>
+<p style="margin:16px 0 0;color:#F1DDE1;font-size:17px">Оставьте заявку — юрист позвонит в течение [XX] минут и назовёт точную цену.</p>
+</div>
+<form style="flex:1 1 360px;max-width:460px;background:#fff;color:var(--ink);border-radius:18px;padding:32px;display:grid;gap:16px">
+<div style="display:grid;gap:6px"><label for="b-name" style="font-size:14px;font-weight:600">Имя</label><input id="b-name" type="text" style="height:48px;border:1px solid #CDBFC3;border-radius:10px;padding:0 14px;font-size:16px"></div>
+<div style="display:grid;gap:6px"><label for="b-phone" style="font-size:14px;font-weight:600">Телефон</label><input id="b-phone" type="tel" placeholder="+7 (___) ___-__-__" style="height:48px;border:1px solid #CDBFC3;border-radius:10px;padding:0 14px;font-size:16px"></div>
+<button class="btn" type="button" style="height:54px;border:0;border-radius:10px;background:var(--brand);color:#fff;font-size:17px;font-weight:700;cursor:pointer">Отправить заявку</button>
+<p style="margin:0;font-size:12.5px;color:var(--muted)">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+</form>
+</div>
+</section>
+
+<footer style="background:#1A0A0F;color:#CDB9BE;padding:36px 0;font-size:15px">
+<div style="max-width:1200px;margin:0 auto;padding:0 32px;display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between"><span>[ООО «НАЗВАНИЕ»] · ИНН [XXXXXXXXXX]</span><a href="Main.dc.html" style="text-decoration:underline">На главную</a></div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brand":{"editor":"color","default":"#6E1428","options":["#6E1428","#7B1E3A","#5C0F24","#8A2A3B"]},"brandDark":{"editor":"color","default":"#3E0A17","options":["#3E0A17","#3F0B18","#55121F"]},"$preview":{"width":1440,"height":5200}}'>
+const REQS = [
+  'Помещения и оборудование на праве собственности или ином законном основании, соответствующие установленным требованиям.',
+  'Медицинское оборудование, зарегистрированное в установленном порядке.',
+  'Руководитель и специалисты с профильным образованием, квалификацией и стажем.',
+  'Наличие договоров или условий для обращения с медицинскими отходами. [Юристу: проверить перечень]'
+];
+const DOCS = [
+  ['Заявление о предоставлении лицензии', 'Учредительные документы организации', 'Документ об уплате государственной пошлины', 'Документы на помещения: право пользования, планы, экспликации', 'Документы на медицинское оборудование', 'Документы о квалификации руководителя и специалистов'],
+  ['Заявление о предоставлении лицензии', 'Копия документа, удостоверяющего личность', 'Документ об уплате государственной пошлины', 'Документы на помещения: право пользования, планы', 'Документы на медицинское оборудование', 'Документы о квалификации заявителя и специалистов']
+];
+const STAGES = [
+  { n: '1', title: 'Анализ и подготовка', text: 'Проверяем помещения, оборудование и кадры, составляем план устранения недочётов.', term: '[СРОК]' },
+  { n: '2', title: 'Сбор документов', text: 'Готовим весь пакет и согласовываем его с вами.', term: '[СРОК]' },
+  { n: '3', title: 'Подача заявления', text: 'Подаём документы в лицензирующий орган дистанционно.', term: '1 день' },
+  { n: '4', title: 'Проверка регулятора', text: 'Сопровождаем оценку соответствия и отвечаем на запросы.', term: 'по закону [УТОЧНИТЬ]' },
+  { n: '5', title: 'Получение лицензии', text: 'Передаём лицензию и памятку по условиям её сохранения.', term: '[СРОК]' }
+];
+const BOX_OFF = 'display:flex;flex-direction:column;background:#fff;border:1px solid #E6DADD;border-radius:16px;padding:28px';
+const BOX_ON = 'display:flex;flex-direction:column;background:#3E0A17;color:#fff;border:1px solid #3E0A17;border-radius:16px;padding:28px;box-shadow:0 18px 40px rgba(74,13,27,.25)';
+const BTN_OFF = 'text-align:center;border:1.5px solid #6E1428;color:#6E1428;font-weight:700;padding:14px;border-radius:10px';
+const BTN_ON = 'text-align:center;background:#fff;color:#3E0A17;font-weight:700;padding:14px;border-radius:10px';
+const TARIFFS = [
+  { name: 'Документы', list: ['Анализ соответствия требованиям', 'Подготовка полного пакета', 'Инструкция по подаче'], on: false },
+  { name: 'Под ключ', list: ['Всё из тарифа «Документы»', 'Подача заявления от вашего имени', 'Сопровождение проверки', 'Получение лицензии'], on: true },
+  { name: 'Под ключ + поддержка', list: ['Всё из тарифа «Под ключ»', 'Консультации после получения', 'Продление и переоформление [УТОЧНИТЬ]'], on: false }
+];
+const FAQ = [
+  { q: 'Можно ли получить лицензию, если помещения ещё нет?', a: 'Помещение — обязательное условие. Мы поможем сформулировать требования к нему ещё до аренды. [Юристу: проверить]' },
+  { q: 'На какой срок выдаётся лицензия?', a: 'Лицензия, как правило, действует бессрочно, но требует соблюдения условий. [Юристу: проверить по действующему закону]' },
+  { q: 'Что делать, если в документах нашли замечания?', a: 'Мы подготовим ответ регулятору и устраним замечания в установленный срок.' },
+  { q: 'Работаете ли вы в моём регионе?', a: 'Работаем дистанционно по всей России. [УТОЧНИТЬ список регионов, если есть ограничения]' }
+];
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { doc: 0, faq: 0 };
+  }
+  renderVals() {
+    const s = this.state;
+    const on = 'min-height:44px;padding:10px 18px;border-radius:999px;border:1px solid #6E1428;background:#6E1428;color:#fff;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer';
+    const off = 'min-height:44px;padding:10px 18px;border-radius:999px;border:1px solid #CDBFC3;background:#fff;color:#20171A;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer';
+    return {
+      brand: this.props.brand ?? '#6E1428',
+      brandDark: this.props.brandDark ?? '#3E0A17',
+      reqs: REQS,
+      docTabs: ['Юридическое лицо', 'Индивидуальный предприниматель'].map((label, i) => ({ label, style: i === s.doc ? on : off, pick: () => this.setState({ doc: i }) })),
+      docs: DOCS[s.doc],
+      stages: STAGES,
+      tariffs: TARIFFS.map((t) => ({ name: t.name, list: t.list, box: t.on ? BOX_ON : BOX_OFF, btn: t.on ? BTN_ON : BTN_OFF })),
+      faq: FAQ.map((f, i) => ({ q: f.q, a: f.a, open: s.faq === i, sign: s.faq === i ? '–' : '+', toggle: () => this.setState({ faq: s.faq === i ? -1 : i }) }))
+    };
+  }
+}
+</script>
+</body>
+</html>
