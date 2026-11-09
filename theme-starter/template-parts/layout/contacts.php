@@ -19,24 +19,21 @@ $sky_chats   = array_filter(
 	]
 );
 ?>
+<?php if ( $sky_tel || is_email( $sky_email ) || $sky_address || $sky_chats ) : ?>
 <ul class="contacts-list">
+	<?php if ( $sky_tel ) : ?>
 	<li class="contacts-list__phone">
-		<?php if ( $sky_tel ) : ?>
 			<a href="<?php echo esc_url( $sky_tel ); ?>"><?php echo esc_html( $sky_phone ); ?></a>
-		<?php else : ?>
-			[ТЕЛЕФОН]
-		<?php endif; ?>
 	</li>
+	<?php endif; ?>
+	<?php if ( is_email( $sky_email ) ) : ?>
 	<li>
-		<?php if ( is_email( $sky_email ) ) : ?>
 			<a href="<?php echo esc_url( 'mailto:' . $sky_email ); ?>"><?php echo esc_html( $sky_email ); ?></a>
-		<?php else : ?>
-			[EMAIL]
-		<?php endif; ?>
 	</li>
-	<li><?php echo esc_html( '' !== $sky_address ? $sky_address : '[АДРЕС ОФИСА]' ); ?></li>
+	<?php endif; ?>
+	<?php if ( $sky_address ) : ?><li><?php echo esc_html( $sky_address ); ?></li><?php endif; ?>
+	<?php if ( $sky_chats ) : ?>
 	<li>
-		<?php if ( $sky_chats ) : ?>
 			<?php
 			$sky_links = [];
 			foreach ( $sky_chats as $sky_label => $sky_url ) {
@@ -44,8 +41,7 @@ $sky_chats   = array_filter(
 			}
 			echo implode( ' · ', $sky_links ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- собрано из экранированных частей.
 			?>
-		<?php else : ?>
-			Telegram · WhatsApp: [КОНТАКТ]
-		<?php endif; ?>
 	</li>
+	<?php endif; ?>
 </ul>
+<?php endif; ?>

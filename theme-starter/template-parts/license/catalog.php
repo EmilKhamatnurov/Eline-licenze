@@ -66,13 +66,15 @@ $sky_home_label = function_exists( 'sky_config' ) ? (string) sky_config( 'breadc
 	data-archive-url="<?php echo esc_url( $sky_views[0]['url'] ); ?>"
 	data-archive-label="<?php echo esc_attr( (string) get_post_type_object( 'license' )->labels->name ); ?>">
 
-	<section class="page-hero is-dark">
-		<div class="sky-container">
+	<section class="page-hero catalog-page-hero">
+		<div class="catalog-page-hero__image" aria-hidden="true"></div>
+		<div class="sky-container catalog-page-hero__container">
 			<div class="page-hero__crumbs">
 				<?php sky_component( 'breadcrumbs' ); ?>
 			</div>
 
 			<div class="catalog-hero">
+				<p class="catalog-eyebrow">Юридическое сопровождение бизнеса</p>
 				<h1 class="page-hero__title" data-catalog-h1><?php echo esc_html( $sky_view['h1'] ); ?></h1>
 				<p class="page-hero__lead" data-catalog-lead><?php echo esc_html( $sky_view['lead'] ); ?></p>
 
@@ -89,6 +91,11 @@ $sky_home_label = function_exists( 'sky_config' ) ? (string) sky_config( 'breadc
 
 	<section class="catalog__body" aria-label="Каталог лицензий">
 		<div class="sky-container">
+			<div class="catalog__heading">
+				<p class="catalog-eyebrow">Направления работы</p>
+				<h2>Найдите свою лицензию</h2>
+				<p>Выберите направление или воспользуйтесь поиском. Если нужна помощь, расскажите нам о вашей задаче.</p>
+			</div>
 			<?php if ( $sky_regs ) : ?>
 				<nav class="filter-chips" aria-label="Направления">
 					<ul class="filter-chips__list">
@@ -125,8 +132,8 @@ $sky_home_label = function_exists( 'sky_config' ) ? (string) sky_config( 'breadc
 			</ul>
 
 			<div class="catalog-empty" data-catalog-empty<?php echo $sky_shown ? ' hidden' : ''; ?>>
-				<h2 class="catalog-empty__title">Ничего не нашли?</h2>
-				<p class="catalog-empty__text">Опишите вид деятельности — подберём лицензию бесплатно.</p>
+				<h2 class="catalog-empty__title"><?php echo $sky_posts ? 'Ничего не нашли?' : 'Поможем подобрать лицензию'; ?></h2>
+				<p class="catalog-empty__text"><?php echo $sky_posts ? 'Опишите вид деятельности — подберём лицензию бесплатно.' : 'В каталоге пока нет опубликованных лицензий. Опишите вид деятельности, и мы поможем разобраться, какая лицензия нужна.'; ?></p>
 				<?php
 				sky_component(
 					'lead-form',
@@ -147,11 +154,11 @@ $sky_home_label = function_exists( 'sky_config' ) ? (string) sky_config( 'breadc
 		<div class="sky-container catalog-cta__inner">
 			<div class="catalog-cta__text">
 				<h2 class="catalog-cta__title">Не знаете, какая лицензия нужна?</h2>
-				<p class="catalog-cta__lead">Пройдите короткий подбор или позвоните — подскажем бесплатно.</p>
+				<p class="catalog-cta__lead">Пройдите короткий подбор или расскажите нам о своей задаче.</p>
 			</div>
 			<div class="catalog-cta__actions">
 				<a class="btn btn--light" href="<?php echo esc_url( home_url( '/#quiz' ) ); ?>">Пройти подбор</a>
-				<a class="btn btn--outline-light" href="<?php echo esc_url( home_url( '/kontakty/' ) ); ?>">Связаться</a>
+				<a class="btn btn--outline-light" href="<?php echo esc_url( home_url( '/#form' ) ); ?>">Обсудить задачу</a>
 			</div>
 		</div>
 	</section>

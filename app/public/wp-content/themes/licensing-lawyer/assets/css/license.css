@@ -1,0 +1,337 @@
+/*
+ * Страница лицензии (single-license.php). Макеты License (1440) и LicenseMobile (390).
+ * Брейкпоинты: 768 — третья плитка и кнопки в hero; 1024 — боковой каталог вместо чипов-якорей.
+ */
+
+/* ── Первый экран ── */
+.license-hero__grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px 40px;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.license-hero__main {
+	flex: 1 1 520px;
+	min-width: 0;
+}
+
+/* Плитки «Стоимость / Срок / Консультация» */
+.license-facts {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 10px;
+	margin: 20px 0 0;
+}
+
+.license-facts__item {
+	padding: 12px 14px;
+	border: 1px solid rgb(255 255 255 / 28%);
+	border-radius: var(--radius-control);
+}
+
+.license-facts dt {
+	font-size: var(--fs-small);
+	color: var(--on-dark-soft);
+}
+
+.license-facts dd {
+	margin: 2px 0 0;
+	font-size: 1.25rem;
+	font-weight: var(--fw-extrabold);
+	line-height: 1.25;
+	text-wrap: balance; /* «от [СРОК] дней» не оставляет «от» одно на строке */
+}
+
+.license-facts__item--extra,
+.license-hero__actions {
+	display: none;
+}
+
+.license-hero__form {
+	flex: 1 1 340px;
+	max-width: 420px;
+	min-width: 0;
+}
+
+.license-hero .request--full {
+	padding: 20px;
+	border-radius: var(--radius-card);
+}
+
+.license-hero .request__head {
+	margin-bottom: var(--space-3);
+}
+
+.license-hero .request__title {
+	font-size: clamp(1.625rem, 1.5rem + 0.4vw, 1.875rem);
+	line-height: 1.1;
+}
+
+/* ── Чипы-якоря (телефон, планшет) ── */
+.license-jump {
+	padding-block: var(--space-4);
+	border-bottom: 1px solid var(--line);
+	background: var(--paper);
+}
+
+.license-jump__list {
+	display: flex;
+	gap: var(--space-2);
+	margin: 0 auto;
+	padding-block: 2px; /* место под обводку фокуса */
+	padding-inline-end: var(--space-6); /* последний чип выходит из-под затухания */
+	list-style: none;
+	overflow-x: auto;
+	scrollbar-width: none;
+	/* Затухание справа — подсказка, что ряд прокручивается */
+	mask-image: linear-gradient(to right, #000 calc(100% - var(--space-6)), transparent);
+}
+
+.license-jump__link {
+	display: flex;
+	flex: none;
+	align-items: center;
+	min-height: var(--tap-min);
+	padding: 0 var(--space-4);
+	border: 1px solid var(--input-border);
+	border-radius: var(--radius-pill);
+	color: var(--ink);
+	font-size: var(--fs-ui);
+	font-weight: var(--fw-semibold);
+	white-space: nowrap;
+	text-decoration: none;
+}
+
+.license-jump__link:hover {
+	border-color: var(--brand);
+	color: var(--brand);
+}
+
+/* ── Тело: каталог + контент ── */
+.license__body {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+	align-items: flex-start;
+	padding-block: 36px var(--space-7); /* до нижнего блока: без отступа «Смежные лицензии» упирались в него */
+}
+
+.license__aside {
+	display: none;
+}
+
+.license__content {
+	display: grid;
+	flex: 999 1 560px;
+	gap: 36px;
+	min-width: 0;
+}
+
+.license-section {
+	scroll-margin-top: var(--space-4);
+}
+
+.license-section__title {
+	margin: 0;
+	font-size: var(--fs-h2-compact);
+	line-height: var(--lh-heading);
+}
+
+.license-section__title--sm {
+	font-size: clamp(1.75rem, 1.65rem + 0.4vw, 2rem);
+	line-height: 1.1;
+}
+
+.license-section__text {
+	margin-top: var(--space-4);
+}
+
+.license-section__text > :last-child {
+	margin-bottom: 0;
+}
+
+.license-section__note {
+	margin: var(--space-3) 0 0;
+	color: var(--muted);
+}
+
+.license-section__footnote {
+	margin: 14px 0 0;
+	color: var(--muted);
+	font-size: var(--fs-xs);
+}
+
+/* ── Боковой каталог ── */
+.catalog-nav__label {
+	margin: 0 0 10px;
+	color: var(--brand);
+	font-size: var(--fs-small);
+	font-weight: var(--fw-bold);
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+}
+
+.catalog-nav__list {
+	display: grid;
+	gap: 2px;
+	margin: 0;
+	padding: var(--space-2);
+	border: 1px solid var(--line);
+	border-radius: 14px;
+	background: var(--paper);
+	list-style: none;
+}
+
+.catalog-nav__link {
+	display: block;
+	padding: var(--space-3) 14px;
+	border-radius: 8px;
+	color: var(--ink);
+	font-size: var(--fs-ui);
+	font-weight: var(--fw-semibold);
+	text-decoration: none;
+	transition: background-color var(--dur) var(--ease);
+}
+
+.catalog-nav__link:hover {
+	background: var(--tint);
+	color: var(--ink);
+}
+
+.catalog-nav__link.is-current,
+.catalog-nav__link.is-current:hover {
+	background: var(--brand);
+	color: var(--white);
+}
+
+.license-help {
+	margin-top: 20px;
+	padding: 20px var(--space-4);
+	border-radius: 14px;
+	background: var(--tint);
+}
+
+.license-help .btn {
+	padding-inline: var(--space-4);
+	font-size: var(--fs-ui);
+}
+
+.license-help__title {
+	margin: 0;
+	font-weight: var(--fw-bold);
+}
+
+.license-help__text {
+	margin: 6px 0 14px;
+	color: var(--muted);
+	font-size: var(--fs-ui);
+}
+
+/* ── Телефон: компактнее ── */
+@media (max-width: 767px) {
+	.checklist__item {
+		gap: var(--space-3);
+		padding: 14px;
+		font-size: var(--fs-ui);
+	}
+
+	.steps__item {
+		column-gap: 14px;
+		padding-bottom: 18px;
+	}
+
+	.steps__num {
+		width: 36px;
+		height: 36px;
+	}
+
+	.steps__item:not(:last-child)::before {
+		top: 42px;
+		left: 17px;
+	}
+
+	.steps__title {
+		font-size: 1.0625rem;
+	}
+
+	.tariffs__item {
+		padding: 22px;
+	}
+
+	.faq__toggle,
+	.faq__toggle:is(:hover, :focus, :active) {
+		min-height: 60px;
+		padding-block: var(--space-3);
+		font-size: 1.03rem;
+	}
+}
+
+/* ── От 768 ── */
+@media (min-width: 768px) {
+	.license-hero__grid {
+		gap: 40px;
+		margin-top: 32px;
+	}
+
+	.license-facts {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-4);
+		margin-top: 28px;
+	}
+
+	.license-facts__item {
+		padding: 14px 20px;
+	}
+
+	.license-facts dd {
+		font-size: 1.5rem;
+	}
+
+	.license-facts__item--extra {
+		display: block;
+	}
+
+	.license-hero__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-3);
+		margin-top: 28px;
+	}
+
+	.license-hero .request--full {
+		padding: 28px;
+		border-radius: 18px;
+	}
+}
+
+/* ── От 1024: каталог слева, чипы не нужны ── */
+@media (min-width: 1024px) {
+	.license-jump {
+		display: none;
+	}
+
+	.license__body {
+		padding-block: 56px 24px;
+	}
+
+	/* Колонка тянется на всю высоту контента, чтобы карточка «Не уверены?» оставалась на экране */
+	.license__aside {
+		display: block;
+		flex: 1 1 260px;
+		align-self: stretch;
+		max-width: 300px;
+		min-width: 240px;
+	}
+
+	.license-help {
+		position: sticky;
+		top: var(--space-5);
+	}
+
+	.license__content {
+		gap: 64px;
+	}
+}

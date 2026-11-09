@@ -6,4 +6,8 @@
  * @package Sky\Baseline
  */
 
-require __DIR__ . '/sky-baseline/sky-baseline.php';
+$baseline = __DIR__ . '/sky-baseline/sky-baseline.php';
+if ( ! is_file( $baseline ) ) {
+	$baseline = dirname( __DIR__, 4 ) . '/baseline/sky-baseline.php';
+}
+require $baseline;

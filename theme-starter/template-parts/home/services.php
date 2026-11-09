@@ -17,12 +17,18 @@ $sky_rows = [
 ?>
 <section class="home-section home-services" id="services" aria-labelledby="services-title">
 	<div class="sky-container">
-		<h2 class="home-section__title" id="services-title">Четыре услуги — одна команда</h2>
+		<div class="home-services__heading">
+			<div>
+				<p class="home-eyebrow">Чем мы можем помочь</p>
+				<h2 class="home-section__title" id="services-title">Юридические вопросы<br>под контролем</h2>
+			</div>
+			<p>От получения лицензии до ежедневных задач бизнеса — выберите, с чего начнём.</p>
+		</div>
 
 		<div class="home-services__grid">
 			<div class="service-main is-dark">
 				<span class="service-main__num" aria-hidden="true">01</span>
-				<h3 class="service-main__title">Лицензирование любых видов</h3>
+				<h3 class="service-main__title">Лицензирование</h3>
 				<p class="service-main__text">Получение, переоформление, продление и восстановление лицензий. Работаем с проверками и устраняем замечания регулятора.</p>
 				<?php if ( $sky_regs ) : ?>
 					<ul class="service-main__chips" aria-label="Направления">

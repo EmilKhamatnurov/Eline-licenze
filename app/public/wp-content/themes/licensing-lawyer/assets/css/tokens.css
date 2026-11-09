@@ -1,0 +1,174 @@
+/*
+ * Дизайн-токены. Источник — design/DESIGN.md (разделы 2–4, 6). Смена бренда = правка этого файла.
+ * Палитра и шрифты Kadence перенаправлены на токены, поэтому настройки цветов
+ * в Customizer Kadence на сайт не влияют — источник правды здесь.
+ *
+ * Плавные размеры: clamp() от телефона (390 px) до десктопа (1440 px).
+ */
+
+:root {
+	/* ── Цвета (DESIGN.md §2) ── */
+	--brand: #6e1428;          /* кнопки, акценты, крупные блоки */
+	--brand-dark: #3e0a17;     /* тёмные секции, заголовки на светлом, hover кнопок */
+	--tint: #f1e3e5;           /* светлые плашки, фон квиза, hover строк */
+	--ground: #f8f3ef;         /* фон страницы */
+	--paper: #fffdfb;          /* шапка, формы, карточки, чередующиеся секции */
+	--ink: #1f1518;            /* основной текст */
+	--muted: #5b4f53;          /* вторичный текст */
+	--line: #e3d6d8;           /* тонкие разделители */
+	--gold: #d9b36c;           /* только на тёмном: кнопка hero, «СКОРО», фокус */
+	--footer: #1a0a0f;         /* подвал */
+	--input-border: #cdbfc3;   /* рамки полей и неактивных чипов */
+	--step-line: #c9b3b8;      /* линия этапов */
+	--numeral-soft: #c9a3ab;   /* крупные приглушённые номера */
+	--on-gold: #2a0d14;        /* текст на золотой кнопке */
+	--on-dark-hover: #f3e4e7;  /* hover белой кнопки на тёмном */
+	--on-dark-soft: #e9d3d8;   /* текст верхней полосы и hero на тёмном (макет) */
+	--footer-text: #cdb9be;    /* текст подвала (макет) */
+	--white: #fff;
+
+	/* Иллюстрация бланка лицензии */
+	--blank-paper: #fbf6ec;
+	--blank-frame: #b88f45;
+	--blank-caption: #7a5c26;
+
+	/* ── Шрифты (§3) ── */
+	--font-text: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+	--font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif; /* только от 26 px */
+
+	/* ── Шкала типографики (§3): телефон → десктоп ── */
+	--fs-display: clamp(2.375rem, 1.493rem + 3.619vw, 4.75rem);   /* H1 главной 38 → 76 */
+	--fs-h1: clamp(2.375rem, 1.911rem + 1.905vw, 3.625rem);       /* H1 внутренних 38 → 58 */
+	--fs-h2: clamp(2.0625rem, 1.529rem + 2.19vw, 3.5rem);         /* H2 33 → 56 */
+	--fs-h2-compact: clamp(2.0625rem, 1.854rem + 0.857vw, 2.625rem); /* H2 на странице лицензии 33 → 42 */
+	--fs-h3: clamp(1.125rem, 1.032rem + 0.381vw, 1.375rem);       /* H3 Manrope 18 → 22 */
+	--fs-body: clamp(1rem, 0.977rem + 0.095vw, 1.0625rem);        /* 16 → 17 */
+	--fs-secondary: clamp(0.90625rem, 0.883rem + 0.095vw, 0.96875rem); /* 14.5 → 15.5 */
+	--fs-small: clamp(0.75rem, 0.727rem + 0.095vw, 0.8125rem);    /* согласие, подписи 12 → 13 */
+	--fs-xs: 0.875rem;                                             /* верхняя полоса, метки полей 14 */
+	--fs-micro: 0.6875rem;                                         /* подпись под логотипом 11, только капсом */
+	--fs-ui: 0.9375rem;                                            /* меню, подвал, метки полей 15 */
+	--fs-numeral: 3.75rem;                                         /* номера этапов, Cormorant 60 */
+
+	--lh-display: 0.98;
+	--lh-h1: 1.02;
+	--lh-h2: 1;
+	--lh-heading: 1.05;  /* H2 средних размеров, заголовки карточек на Cormorant */
+	--lh-h3: 1.25;
+	--lh-body: 1.55;
+
+	--fw-regular: 400;
+	--fw-medium: 500;
+	--fw-semibold: 600;
+	--fw-bold: 700;
+	--fw-extrabold: 800;
+
+	--tracking-display: -0.01em;
+	--tracking-caps: 0.12em; /* плашка «СКОРО», верхняя полоса */
+
+	/* ── Сетка и отступы (§4) ── */
+	--container: 1200px;   /* вместе с полями: контент 1136 px */
+	--gutter: 1rem;        /* 16 на телефоне, 32 от 768 — см. @media ниже */
+	--section-y: clamp(2.5rem, 1.107rem + 5.714vw, 6.25rem); /* 40 → 100 */
+
+	--space-1: 0.25rem;  /* 4 */
+	--space-2: 0.5rem;   /* 8 */
+	--space-3: 0.75rem;  /* 12 */
+	--space-4: 1rem;     /* 16 */
+	--space-5: 1.5rem;   /* 24 */
+	--space-6: 2rem;     /* 32 */
+	--space-7: 3rem;     /* 48 */
+	--space-8: 4.5rem;   /* 72 */
+
+	--btn-height: 3.5rem;       /* кнопки 56 */
+	--btn-height-sm: 3rem;      /* кнопка в шапке 48 */
+	--field-height: 3.25rem;    /* поля 52 */
+	--tap-min: 2.75rem;         /* минимальная цель нажатия 44 */
+	--mobile-bar-space: 6rem;   /* нижний отступ под панель действий 96 (84–100) */
+
+	/* ── Радиусы (§4) ── */
+	--radius-control-sm: 10px; /* поля, кнопка в шапке, бургер */
+	--radius-control: 12px; /* поля, кнопки 10–12 */
+	--radius-card: 16px;    /* карточки 14–20 */
+	--radius-form: 20px;    /* формы */
+	--radius-pill: 999px;   /* чипы */
+	--radius-round: 50%;    /* печать */
+
+	/* ── Тени (§4): только формы и бланк ── */
+	--shadow-form: 0 14px 34px rgb(74 13 27 / 14%);
+	--shadow-blank: 0 30px 60px rgb(0 0 0 / 35%);
+	--shadow-bar: 0 -8px 24px rgb(32 23 26 / 12%); /* мобильная панель действий */
+	--shadow-menu: 0 20px 30px rgb(32 23 26 / 15%); /* выпадающая панель меню */
+
+	/* ── Движение и фокус (§6) ── */
+	--dur: 180ms;
+	--ease: ease;
+	--focus-ring: 3px solid var(--gold);
+	--focus-offset: 2px;
+
+	/*
+	 * Брейкпоинты — для справки: CSS-переменные нельзя использовать в @media.
+	 * Ширины проверки: 390, 768, 1024, 1440.
+	 */
+	--bp-tablet: 768px;
+	--bp-desktop: 1024px;
+
+	/* ── Совместимость: токены стартера → токены дизайна ── */
+	--sky-color-accent: var(--brand);
+	--sky-color-accent-hover: var(--brand-dark);
+	--sky-color-accent-contrast: var(--white);
+	--sky-color-secondary: var(--gold);
+	--sky-color-text: var(--ink);
+	--sky-color-text-muted: var(--muted);
+	--sky-color-heading: var(--brand-dark);
+	--sky-color-border: var(--line);
+	--sky-color-surface: var(--paper);
+	--sky-color-bg: var(--ground);
+	--sky-color-success: var(--brand-dark);
+	--sky-color-error: var(--brand); /* ошибка = текст --brand + иконка, не только цвет (§6) */
+	--sky-font-body: var(--font-text);
+	--sky-font-heading: var(--font-display);
+	--sky-lh-body: var(--lh-body);
+	--sky-lh-heading: var(--lh-heading);
+	--sky-fs-s: var(--fs-secondary);
+	--sky-fs-m: var(--fs-body);
+	--sky-fs-l: var(--fs-h3);
+	--sky-fs-xl: var(--fs-h2-compact);
+	--sky-fs-xxl: var(--fs-h1);
+	--sky-space-xs: var(--space-2);
+	--sky-space-s: var(--space-4);
+	--sky-space-m: var(--space-5);
+	--sky-space-l: var(--space-7);
+	--sky-space-xl: var(--section-y);
+	--sky-radius-s: var(--radius-control);
+	--sky-radius-m: var(--radius-card);
+	--sky-radius-l: var(--radius-form);
+	--sky-shadow: var(--shadow-form);
+	--sky-container: var(--container);
+	--sky-container-narrow: 760px;
+
+	/* ── Kadence → токены ── */
+	--global-palette1: var(--brand);
+	--global-palette2: var(--brand-dark);
+	--global-palette3: var(--brand-dark);
+	--global-palette4: var(--ink);
+	--global-palette5: var(--muted);
+	--global-palette6: var(--line);
+	--global-palette7: var(--tint);
+	--global-palette8: var(--ground);
+	--global-palette9: var(--paper);
+	--global-palette-btn-bg: var(--brand);
+	--global-palette-btn-bg-hover: var(--brand-dark);
+	--global-palette-btn: var(--white);
+	--global-palette-btn-hover: var(--white);
+	--global-body-font-family: var(--font-text);
+	--global-heading-font-family: var(--font-display);
+	--global-content-width: var(--container);
+	--global-content-edge-padding: var(--gutter);
+}
+
+@media (min-width: 768px) {
+	:root {
+		--gutter: 2rem;
+	}
+}

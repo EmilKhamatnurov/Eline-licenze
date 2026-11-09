@@ -49,10 +49,22 @@ function sky_starter_enqueue(): void {
 	if ( is_front_page() ) {
 		$styles['sky-home'] = [ 'home.css', [ 'sky-components' ] ];
 		$styles['sky-quiz'] = [ 'quiz.css', [ 'sky-components' ] ]; // Квиз на главной — стили в <head>, без вспышки.
+		$styles['sky-home-refinements'] = [ 'home-refinements.css', [ 'sky-home', 'sky-quiz' ] ];
 	}
 	foreach ( $styles as $handle => [ $file, $deps ] ) {
 		wp_enqueue_style( $handle, $uri . '/assets/css/' . $file, $deps, (string) filemtime( $dir . '/assets/css/' . $file ) );
 	}
+
+	wp_enqueue_script(
+		'sky-scroll-reveal',
+		$uri . '/assets/js/scroll-reveal.js',
+		[],
+		(string) filemtime( $dir . '/assets/js/scroll-reveal.js' ),
+		[
+			'in_footer' => true,
+			'strategy'  => 'defer',
+		]
+	);
 
 	wp_enqueue_script(
 		'sky-header',

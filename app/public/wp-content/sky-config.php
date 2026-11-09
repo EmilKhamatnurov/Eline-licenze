@@ -1,1 +1,2 @@
-/Users/emilhamatnurov/Local Sites/licensing-lawyer-elina/project/sky-config.php
+<?php
+return require dirname( __DIR__, 3 ) . '/project/sky-config.php';

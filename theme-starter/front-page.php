@@ -43,11 +43,7 @@ $sky_reasons = [
 	],
 	[
 		'title' => 'Цена и срок — в договоре',
-		'text'  => 'Вы знаете итоговую стоимость до начала работы. [УТОЧНИТЬ условия гарантии]',
-	],
-	[
-		'title' => 'Юристы с профильным опытом',
-		'text'  => '[Описать опыт команды и работу в лицензирующих органах]',
+		'text'  => 'Стоимость и сроки согласовываем до начала работы и фиксируем в договоре.',
 	],
 	[
 		'title' => 'Поддержка после получения',
@@ -60,10 +56,10 @@ $sky_reasons = [
 ];
 
 $sky_faq = [
-	[ 'Сколько стоит получение лицензии?', 'Стоимость зависит от вида лицензии, региона и готовности вашей компании. Точную цену фиксируем в договоре после бесплатной консультации. [УТОЧНИТЬ вилку цен]' ],
-	[ 'Как долго оформляется лицензия?', 'Сроки определяются законом и регулятором, а также качеством подготовки документов. Ориентиры по каждому виду — на странице лицензии. [УТОЧНИТЬ]' ],
+	[ 'Сколько стоит получение лицензии?', 'Стоимость зависит от вида лицензии, региона и готовности вашей компании. Точную цену фиксируем в договоре после бесплатной консультации.' ],
+	[ 'Как долго оформляется лицензия?', 'Сроки определяются законом и регулятором, а также качеством подготовки документов. Ориентиры по каждому виду — на странице лицензии.' ],
 	[ 'Нужно ли приезжать в ваш офис?', 'Нет. Мы работаем дистанционно по всей России: документы подписываются электронно, подача — через официальные сервисы.' ],
-	[ 'Что, если регулятор откажет?', 'Разберём причину, устраним замечания и подадим повторно. Условия указываем в договоре. [УТОЧНИТЬ политику]' ],
+	[ 'Что, если регулятор откажет?', 'Разберём причину, устраним замечания и подадим повторно. Условия указываем в договоре.' ],
 	[ 'Можно ли заказать только документы?', 'Да. Подготовим пакет документов или проверим ваш, а подачу вы выполните самостоятельно.' ],
 ];
 $sky_faq = array_map(
@@ -84,6 +80,16 @@ get_header();
 <div id="main" class="home">
 	<?php
 	get_template_part( 'template-parts/home/hero' );
+	?>
+	<section class="home-intro" aria-labelledby="intro-title">
+		<div class="sky-container home-intro__inner">
+			<p class="home-eyebrow">Внимание к вашей задаче</p>
+			<h2 id="intro-title">Сложные вопросы<br>становятся понятнее.</h2>
+			<p>От первого вопроса до готовых документов — помогаем разобраться в требованиях и пройти каждый этап с уверенностью.</p>
+			<a href="#services" class="home-text-link">Наши услуги <span aria-hidden="true">↗</span></a>
+		</div>
+	</section>
+	<?php
 	get_template_part( 'template-parts/home/services' );
 	get_template_part( 'template-parts/home/catalog' );
 	sky_component( 'quiz' );
@@ -91,7 +97,10 @@ get_header();
 
 	<section class="home-section home-process" aria-labelledby="process-title">
 		<div class="sky-container">
-			<h2 class="home-section__title" id="process-title">От заявки до лицензии — пять шагов</h2>
+			<div class="home-process__heading">
+				<div><p class="home-eyebrow">Как мы работаем</p><h2 class="home-section__title" id="process-title">Пять шагов<br>к вашей лицензии</h2></div>
+				<p>Берём на себя документы и общение с регулятором. Вы понимаете, что происходит на каждом этапе.</p>
+			</div>
 			<?php
 			sky_component(
 				'steps',
@@ -106,14 +115,13 @@ get_header();
 
 	<section class="home-section home-why" aria-labelledby="why-title">
 		<div class="sky-container home-why__inner">
-			<h2 class="home-section__title home-why__title" id="why-title">Почему работают с нами</h2>
+			<div class="home-why__heading"><p class="home-eyebrow">Поддержка на каждом этапе</p><h2 class="home-section__title home-why__title" id="why-title">Когда можно<br>довериться<br>юристу</h2><p>Знакомимся с вашей задачей, договариваемся об условиях и остаёмся на связи в процессе работы.</p><a class="home-text-link" href="#form">Обсудить задачу <span aria-hidden="true">↗</span></a></div>
 			<?php sky_component( 'advantages', [ 'items' => $sky_reasons ] ); ?>
 		</div>
 	</section>
 
 	<?php
 	get_template_part( 'template-parts/home/ai' );
-	get_template_part( 'template-parts/home/trust' );
 	?>
 
 	<section class="home-section home-faq" id="faq" aria-labelledby="faq-title">

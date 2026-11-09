@@ -1,0 +1,150 @@
+{
+ "url": "http://elina.local/",
+ "views": {
+  "desktop": {
+   "width": 1440,
+   "height": 900,
+   "navH": 0,
+   "scrollHeight": 7522,
+   "screens": 8.36,
+   "sections": [
+    {
+     "n": 1,
+     "tag": "div",
+     "id": "main",
+     "cls": "home",
+     "top": 170,
+     "h": 7048,
+     "hScreens": 7.83,
+     "offGrid": 748,
+     "tiles": [
+      {
+       "file": "desktop-sec-01-a.jpg",
+       "scrollY": 170
+      },
+      {
+       "file": "desktop-sec-01-b.jpg",
+       "scrollY": 1070
+      },
+      {
+       "file": "desktop-sec-01-c.jpg",
+       "scrollY": 1970
+      },
+      {
+       "file": "desktop-sec-01-d.jpg",
+       "scrollY": 2870
+      },
+      {
+       "file": "desktop-sec-01-e.jpg",
+       "scrollY": 3770
+      },
+      {
+       "file": "desktop-sec-01-f.jpg",
+       "scrollY": 4670
+      },
+      {
+       "file": "desktop-sec-01-g.jpg",
+       "scrollY": 5570
+      },
+      {
+       "file": "desktop-sec-01-h.jpg",
+       "scrollY": 6318
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "tag": "footer",
+     "id": "",
+     "cls": "site-footer",
+     "top": 7218,
+     "h": 305,
+     "hScreens": 0.34,
+     "offGrid": 305,
+     "tiles": [
+      {
+       "file": "desktop-sec-02-a.jpg",
+       "scrollY": 6622,
+       "cutTop": 596,
+       "height": 304
+      }
+     ]
+    }
+   ],
+   "consoleErrors": []
+  },
+  "mobile": {
+   "width": 390,
+   "height": 844,
+   "navH": 0,
+   "scrollHeight": 9044,
+   "screens": 10.72,
+   "sections": [
+    {
+     "n": 1,
+     "tag": "div",
+     "id": "main",
+     "cls": "home",
+     "top": 65,
+     "h": 8378,
+     "hScreens": 9.93,
+     "offGrid": 782,
+     "tiles": [
+      {
+       "file": "mobile-sec-01-a.jpg",
+       "scrollY": 65
+      },
+      {
+       "file": "mobile-sec-01-b.jpg",
+       "scrollY": 909
+      },
+      {
+       "file": "mobile-sec-01-c.jpg",
+       "scrollY": 1753
+      },
+      {
+       "file": "mobile-sec-01-d.jpg",
+       "scrollY": 2597
+      },
+      {
+       "file": "mobile-sec-01-e.jpg",
+       "scrollY": 3441
+      },
+      {
+       "file": "mobile-sec-01-f.jpg",
+       "scrollY": 4285
+      },
+      {
+       "file": "mobile-sec-01-g.jpg",
+       "scrollY": 5129
+      },
+      {
+       "file": "mobile-sec-01-h.jpg",
+       "scrollY": 5973
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "tag": "footer",
+     "id": "",
+     "cls": "site-footer",
+     "top": 8443,
+     "h": 505,
+     "hScreens": 0.6,
+     "offGrid": 505,
+     "tiles": [
+      {
+       "file": "mobile-sec-02-a.jpg",
+       "scrollY": 8200,
+       "cutTop": 243,
+       "height": 505
+      }
+     ]
+    }
+   ],
+   "consoleErrors": []
+  }
+ },
+ "at": "2026-11-07T15:21:47.147Z"
+}

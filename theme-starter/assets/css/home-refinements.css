@@ -1,0 +1,118 @@
+/* Главная: услуги, подбор, этапы и преимущества. */
+.home .home-services { background: #f2eee8; }
+.home-services__heading,
+.home-process__heading { display: flex; flex-wrap: wrap; gap: 24px 60px; align-items: end; justify-content: space-between; }
+.home-services__heading > p,
+.home-process__heading > p,
+.home-why__heading > p:not(.home-eyebrow) { max-width: 350px; margin: 0 0 5px; color: #655a59; font-size: 1rem; line-height: 1.75; }
+.home .home-services__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; margin-top: 54px; }
+.home .service-main,
+.home .service-rows li { min-width: 0; min-height: 280px; }
+.home .service-main { gap: 18px; padding: 38px; background: #562132; }
+.home .service-main__num,
+.home .service-row__num { width: auto; font: 600 .72rem/1.2 var(--font-text); letter-spacing: .12em; }
+.home .service-main__title,
+.home .service-row__title { font: 500 clamp(2rem, 2.8vw, 2.8rem)/1.05 var(--font-display); letter-spacing: -.02em; }
+.home .service-main__text { flex: 0; max-width: 440px; margin: 0; font-size: .95rem; line-height: 1.65; }
+.home .service-main__btn { margin-top: auto; }
+.home .service-rows { display: contents; }
+.home .service-rows li,
+.home .service-rows li:last-child { border: 0; background: #fffdf9; }
+.home .service-row { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 0; min-height: 280px; padding: 38px; transition: background-color .2s ease; }
+.home .service-row:hover { background: #eae2dd; }
+.home .service-row__body { display: block; flex: 0; margin-top: 25px; }
+.home .service-row__title { display: block; }
+.home .service-row__text { max-width: 430px; margin-top: 14px; color: #655a59; font-size: .95rem; line-height: 1.65; }
+.home .service-row__arrow { position: absolute; top: 32px; right: 36px; font-size: 1.5rem; }
+.home .service-row .badge { vertical-align: middle; }
+
+.home .quiz-section { padding-block: clamp(80px, 8vw, 120px); background: #e9dfdc; }
+.quiz-consult { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(45px, 8vw, 120px); align-items: center; }
+.quiz-consult__eyebrow, .quiz-consult__aside-label { margin: 0 0 25px; color: #76555b; font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.quiz-consult__intro h2 { max-width: 620px; margin: 0; color: #421722; font-size: clamp(2.9rem, 4.6vw, 4.75rem); font-weight: 500; letter-spacing: -.025em; line-height: 1; }
+.quiz-consult__intro > p:not(.quiz-consult__eyebrow) { max-width: 470px; margin: 24px 0 0; color: #655a59; line-height: 1.75; }
+.quiz-consult__link { display: inline-flex; gap: 48px; align-items: center; min-height: 52px; margin-top: 30px; padding: 0 22px; background: #562132; color: #fff; font-size: .85rem; font-weight: 700; text-decoration: none; transition: background .2s ease; }
+.quiz-consult__link:hover { background: #3e0a17; color: #fff; }
+.quiz-consult__link span { transition: transform .2s ease; }
+.quiz-consult__link:hover span { transform: translate(3px, -3px); }
+.quiz-consult__aside { padding: 36px 40px; background: #f8f6f1; }
+.quiz-consult__aside-label { margin-bottom: 10px; }
+.quiz-consult__aside ol { margin: 0; padding: 0; list-style: none; counter-reset: consultation; }
+.quiz-consult__aside li { display: flex; gap: 20px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid #ded3cf; color: #421722; font-size: 1rem; counter-increment: consultation; }
+.quiz-consult__aside li:last-child { border-bottom: 0; }
+.quiz-consult__aside li::before { content: '0' counter(consultation); color: #a37d80; font-size: .75rem; }
+
+.home .home-process { background: #f8f6f1; }
+.home-process > .sky-container { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(48px, 7vw, 100px); }
+.home-process__heading { display: block; }
+.home-process__heading > p { margin-top: 28px; }
+.home .home-process .steps--row { display: block; margin: 0; }
+.home .home-process .steps--row .steps__item { display: grid; grid-template-columns: 62px minmax(0, 1fr); gap: 18px; padding: 22px 0; border-top: 1px solid #d8ccca; }
+.home .home-process .steps--row .steps__item:last-child { border-bottom: 1px solid #d8ccca; }
+.home .home-process .steps--row .steps__item::before,
+.home .home-process .steps--row .steps__item::after { content: none; }
+.home .home-process .steps--row .steps__num { display: block; width: auto; height: auto; border-radius: 0; background: none; color: #a8757f; font-size: 0; }
+.home .home-process .steps--row .steps__num::before { content: attr(data-pad); font: 500 2.3rem/.95 var(--font-display); font-variant-numeric: lining-nums tabular-nums; }
+.home .home-process .steps--row .steps__body { display: grid; grid-template-columns: minmax(130px, .75fr) minmax(0, 1.25fr); gap: 8px 25px; align-items: start; padding: 3px 0 0; }
+.home .home-process .steps--row .steps__title { margin: 0; color: #421722; font-size: 1.05rem; }
+.home .home-process .steps--row .steps__text { margin: 0; font-size: .95rem; line-height: 1.6; }
+
+.home .home-why { background: #eeeae2; }
+.home .home-why__inner { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(48px, 7vw, 100px); }
+.home-why__heading > p:not(.home-eyebrow) { margin-top: 28px; }
+.home .home-why .advantages { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 30px; }
+.home .home-why .advantages__item { gap: 16px; min-width: 0; padding: 22px 0 25px; border-top: 1px solid #d8ccca; }
+.home .home-why .advantages__item:last-child { grid-column: 1 / -1; }
+.home .home-why .advantages__num { width: 30px; color: #a8757f; font: 500 1.55rem/1 var(--font-display); }
+.home .home-why .advantages__title { margin-bottom: 9px; color: #421722; font-size: 1.05rem; line-height: 1.35; }
+.home .home-why .advantages__text { max-width: 360px; font-size: .95rem; line-height: 1.65; }
+
+@media (max-width: 767px) {
+	.home .home-services__grid { grid-template-columns: 1fr; gap: 2px; margin-top: 35px; }
+	.home .service-main, .home .service-row, .home .service-rows li { min-height: 0; }
+	.home .service-main, .home .service-row { padding: 28px; }
+	.home .service-main__btn { margin-top: 12px; }
+	.home .service-row__arrow { top: 22px; right: 27px; }
+	.quiz-consult, .home-process > .sky-container, .home .home-why__inner { grid-template-columns: 1fr; gap: 40px; }
+	.quiz-consult__aside { padding: 25px; }
+	.home .home-process .steps--row .steps__body { grid-template-columns: 1fr; }
+	.home .home-why .advantages { grid-template-columns: 1fr; }
+	.home .home-why .advantages__item:last-child { grid-column: auto; }
+}
+
+/* Архитектурные фотографии и контрастные плоскости задают ритм между разделами. */
+.home .home-services { background: #eae4dc; }
+.home .service-rows li,
+.home .service-rows li:last-child { background: #f8f6f1; }
+.home .service-rows li:nth-child(2) { background: #e3d9d1; }
+.home .service-row:hover { background: #dcd0c9; }
+
+.home .quiz-section--consult {
+	padding-block: clamp(85px, 9vw, 140px);
+	background: #c1b8ac url('../images/architecture-interior.webp') center 53% / cover no-repeat;
+}
+.quiz-section--consult .quiz-consult { gap: clamp(35px, 7vw, 100px); align-items: stretch; }
+.quiz-section--consult .quiz-consult__intro {
+	padding: clamp(30px, 4vw, 56px);
+	background: #f8f6f1;
+}
+.quiz-section--consult .quiz-consult__aside { align-self: center; background: #f8f6f1; }
+
+.home .home-process { background: #f3f0ea; }
+.home-process__heading::after {
+	content: "";
+	display: block;
+	width: min(100%, 350px);
+	height: clamp(180px, 19vw, 270px);
+	margin-top: 40px;
+	background: #c1b8ac url('../images/architecture-detail.webp') center 62% / cover no-repeat;
+}
+.home .home-why { background: #e8dfd8; }
+
+@media (max-width: 767px) {
+	.home .quiz-section--consult { padding-block: 40px; }
+	.quiz-section--consult .quiz-consult { gap: 18px; }
+	.quiz-section--consult .quiz-consult__intro { padding: 30px 25px; }
+	.quiz-section--consult .quiz-consult__aside { padding: 25px; }
+	.home-process__heading::after { width: 100%; height: 200px; margin-top: 28px; }
+}

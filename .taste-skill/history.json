@@ -1,0 +1,21 @@
+{
+ "palettes": [],
+ "types": [],
+ "dealt": [
+  "source-serif",
+  "red-hat",
+  "funnel"
+ ],
+ "moments": [
+  {
+   "id": "pinned-chapters",
+   "at": "2026-11-07T14:33:08.988Z",
+   "seed": "9bf50d04"
+  },
+  {
+   "id": "picture-develops",
+   "at": "2026-11-07T15:00:27.658Z",
+   "seed": "d91bea53"
+  }
+ ]
+}

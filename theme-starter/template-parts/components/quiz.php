@@ -28,6 +28,28 @@ $sky_config = sky_starter_quiz_config();
 $sky_data   = sky_starter_quiz_data();
 $sky_id     = sanitize_html_class( $args['id'] );
 
+// Без данных каталога единственным ответом квиза становится «Другое». Сразу предлагаем консультацию.
+$sky_has_licenses = array_filter( $sky_data['activities'], static fn( $activity ) => ! empty( $activity['licenses'] ) );
+if ( ! $sky_has_licenses ) :
+	?>
+	<section class="quiz-section quiz-section--consult" id="<?php echo esc_attr( $sky_id ); ?>" aria-labelledby="<?php echo esc_attr( $sky_id ); ?>-title">
+		<div class="sky-container quiz-consult">
+			<div class="quiz-consult__intro">
+				<p class="quiz-consult__eyebrow">Начнём с вашего вопроса</p>
+				<h2 id="<?php echo esc_attr( $sky_id ); ?>-title">Не знаете, какая лицензия нужна?</h2>
+				<p>Расскажите о своей деятельности — поможем разобраться в требованиях и следующих шагах.</p>
+				<a class="quiz-consult__link" href="<?php echo esc_url( sky_starter_form_anchor() ); ?>">Обсудить задачу <span aria-hidden="true">↗</span></a>
+			</div>
+			<div class="quiz-consult__aside">
+				<p class="quiz-consult__aside-label">На консультации</p>
+				<ol><li>Разберём вашу ситуацию</li><li>Подскажем, какие документы нужны</li><li>Обсудим стоимость и сроки</li></ol>
+			</div>
+		</div>
+	</section>
+	<?php
+	return;
+endif;
+
 wp_enqueue_script( 'sky-quiz' );
 wp_enqueue_style( 'sky-quiz' );
 ?>

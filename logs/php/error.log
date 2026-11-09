@@ -17,3 +17,110 @@
 [12-Oct-2026 20:56:59 UTC] PHP Warning:  Cannot modify header information - headers already sent in /Users/emilhamatnurov/Local Sites/licensing-lawyer-elina/app/public/wp-includes/load.php on line 414
 [12-Oct-2026 20:56:59 UTC] PHP Warning:  Cannot modify header information - headers already sent in /Users/emilhamatnurov/Local Sites/licensing-lawyer-elina/app/public/wp-includes/load.php on line 414
 [12-Oct-2026 20:57:00 UTC] PHP Warning:  Cannot modify header information - headers already sent in /Users/emilhamatnurov/Local Sites/licensing-lawyer-elina/app/public/wp-includes/load.php on line 414
+[07-Nov-2026 11:40:12 UTC] PHP Warning:  require(C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins/sky-baseline/sky-baseline.php): Failed to open stream: No such file or directory in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php on line 9
+[07-Nov-2026 11:40:12 UTC] PHP Warning:  require(C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins/sky-baseline/sky-baseline.php): Failed to open stream: No such file or directory in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php on line 9
+[07-Nov-2026 11:40:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins/sky-baseline/sky-baseline.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php:9
+Stack trace:
+#0 C:\Users\Гульнара\Local Sites\Elina\app\public\wp-settings.php(508): include_once()
+#1 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1374): require('C:\\Users\\\xD0\x93\xD1\x83\xD0\xBB...')
+#2 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1293): WP_CLI\Runner->load_wordpress()
+#3 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php(28): WP_CLI\Runner->start()
+#4 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php(84): WP_CLI\Bootstrap\LaunchRunner->process(Object(WP_CLI\Bootstrap\BootstrapState))
+#5 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php(35): WP_CLI\bootstrap()
+#6 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php(20): include('phar://C:/Users...')
+#7 C:\Users\Гульнара\AppData\Local\Programs\Local\resources\extraResources\bin\wp-cli\wp-cli.phar(4): include('phar://C:/Users...')
+#8 {main}
+  thrown in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php on line 9
+[07-Nov-2026 11:40:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins/sky-baseline/sky-baseline.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php:9
+Stack trace:
+#0 C:\Users\Гульнара\Local Sites\Elina\app\public\wp-settings.php(508): include_once()
+#1 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1374): require('C:\\Users\\\xD0\x93\xD1\x83\xD0\xBB...')
+#2 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1293): WP_CLI\Runner->load_wordpress()
+#3 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php(28): WP_CLI\Runner->start()
+#4 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php(84): WP_CLI\Bootstrap\LaunchRunner->process(Object(WP_CLI\Bootstrap\BootstrapState))
+#5 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php(35): WP_CLI\bootstrap()
+#6 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php(20): include('phar://C:/Users...')
+#7 C:\Users\Гульнара\AppData\Local\Programs\Local\resources\extraResources\bin\wp-cli\wp-cli.phar(4): include('phar://C:/Users...')
+#8 {main}
+  thrown in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php on line 9
+[07-Nov-2026 11:40:15 UTC] PHP Warning:  require(C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins/sky-baseline/sky-baseline.php): Failed to open stream: No such file or directory in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php on line 9
+[07-Nov-2026 11:40:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins/sky-baseline/sky-baseline.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php:9
+Stack trace:
+#0 C:\Users\Гульнара\Local Sites\Elina\app\public\wp-settings.php(508): include_once()
+#1 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1374): require('C:\\Users\\\xD0\x93\xD1\x83\xD0\xBB...')
+#2 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1293): WP_CLI\Runner->load_wordpress()
+#3 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php(28): WP_CLI\Runner->start()
+#4 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php(84): WP_CLI\Bootstrap\LaunchRunner->process(Object(WP_CLI\Bootstrap\BootstrapState))
+#5 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php(35): WP_CLI\bootstrap()
+#6 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php(20): include('phar://C:/Users...')
+#7 C:\Users\Гульнара\AppData\Local\Programs\Local\resources\extraResources\bin\wp-cli\wp-cli.phar(4): include('phar://C:/Users...')
+#8 {main}
+  thrown in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php on line 9
+[07-Nov-2026 11:40:19 UTC] PHP Warning:  require(C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins/sky-baseline/sky-baseline.php): Failed to open stream: No such file or directory in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php on line 9
+[07-Nov-2026 11:40:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins/sky-baseline/sky-baseline.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php:9
+Stack trace:
+#0 C:\Users\Гульнара\Local Sites\Elina\app\public\wp-settings.php(508): include_once()
+#1 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1374): require('C:\\Users\\\xD0\x93\xD1\x83\xD0\xBB...')
+#2 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/eval-command/src/Eval_Command.php(36): WP_CLI\Runner->load_wordpress()
+#3 [internal function]: Eval_Command->__invoke(Array, Array)
+#4 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Dispatcher/CommandFactory.php(100): call_user_func(Array, Array, Array)
+#5 [internal function]: WP_CLI\Dispatcher\CommandFactory::WP_CLI\Dispatcher\{closure}(Array, Array)
+#6 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Dispatcher/Subcommand.php(497): call_user_func(Object(Closure), Array, Array)
+#7 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(470): WP_CLI\Dispatcher\Subcommand->invoke(Array, Array, Array)
+#8 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(493): WP_CLI\Runner->run_command(Array, Array)
+#9 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(136): WP_CLI\Runner->run_command_and_exit()
+#10 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1228): WP_CLI\Runner->do_early_invoke('before_wp_load')
+#11 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php(28): WP_CLI\Runner->start()
+#12 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php(84): WP_CLI\Bootstrap\LaunchRunner->process(Object(WP_CLI\Bootstrap\BootstrapState))
+#13 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php(35): WP_CLI\bootstrap()
+#14 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php(20): include('phar://C:/Users...')
+#15 C:\Users\Гульнара\AppData\Local\Programs\Local\resources\extraResources\bin\wp-cli\wp-cli.phar(4): include('phar://C:/Users...')
+#16 {main}
+  thrown in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php on line 9
+[07-Nov-2026 11:40:19 UTC] PHP Warning:  require(C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins/sky-baseline/sky-baseline.php): Failed to open stream: No such file or directory in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php on line 9
+[07-Nov-2026 11:40:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins/sky-baseline/sky-baseline.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php:9
+Stack trace:
+#0 C:\Users\Гульнара\Local Sites\Elina\app\public\wp-settings.php(508): include_once()
+#1 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1374): require('C:\\Users\\\xD0\x93\xD1\x83\xD0\xBB...')
+#2 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1293): WP_CLI\Runner->load_wordpress()
+#3 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php(28): WP_CLI\Runner->start()
+#4 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php(84): WP_CLI\Bootstrap\LaunchRunner->process(Object(WP_CLI\Bootstrap\BootstrapState))
+#5 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php(35): WP_CLI\bootstrap()
+#6 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php(20): include('phar://C:/Users...')
+#7 C:\Users\Гульнара\AppData\Local\Programs\Local\resources\extraResources\bin\wp-cli\wp-cli.phar(4): include('phar://C:/Users...')
+#8 {main}
+  thrown in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php on line 9
+[07-Nov-2026 11:40:21 UTC] PHP Warning:  require(C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins/sky-baseline/sky-baseline.php): Failed to open stream: No such file or directory in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php on line 9
+[07-Nov-2026 11:40:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins/sky-baseline/sky-baseline.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php:9
+Stack trace:
+#0 C:\Users\Гульнара\Local Sites\Elina\app\public\wp-settings.php(508): include_once()
+#1 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1374): require('C:\\Users\\\xD0\x93\xD1\x83\xD0\xBB...')
+#2 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1293): WP_CLI\Runner->load_wordpress()
+#3 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php(28): WP_CLI\Runner->start()
+#4 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php(84): WP_CLI\Bootstrap\LaunchRunner->process(Object(WP_CLI\Bootstrap\BootstrapState))
+#5 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php(35): WP_CLI\bootstrap()
+#6 phar://C:/Users/Гульнара/AppData/Local/Programs/Local/resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php(20): include('phar://C:/Users...')
+#7 C:\Users\Гульнара\AppData\Local\Programs\Local\resources\extraResources\bin\wp-cli\wp-cli.phar(4): include('phar://C:/Users...')
+#8 {main}
+  thrown in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php on line 9
+[07-Nov-2026 11:40:24 UTC] PHP Warning:  require(C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins/sky-baseline/sky-baseline.php): Failed to open stream: No such file or directory in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php on line 9
+[07-Nov-2026 11:40:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins/sky-baseline/sky-baseline.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php:9
+Stack trace:
+#0 C:\Users\Гульнара\Local Sites\Elina\app\public\wp-settings.php(508): include_once()
+#1 C:\Users\Гульнара\Local Sites\Elina\app\public\wp-config.php(103): require_once('C:\\Users\\\xD0\x93\xD1\x83\xD0\xBB...')
+#2 C:\Users\Гульнара\Local Sites\Elina\app\public\wp-load.php(50): require_once('C:\\Users\\\xD0\x93\xD1\x83\xD0\xBB...')
+#3 C:\Users\Гульнара\Local Sites\Elina\app\public\wp-blog-header.php(13): require_once('C:\\Users\\\xD0\x93\xD1\x83\xD0\xBB...')
+#4 C:\Users\Гульнара\Local Sites\Elina\app\public\index.php(17): require('C:\\Users\\\xD0\x93\xD1\x83\xD0\xBB...')
+#5 {main}
+  thrown in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php on line 9
+[07-Nov-2026 11:40:24 UTC] PHP Warning:  require(C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins/sky-baseline/sky-baseline.php): Failed to open stream: No such file or directory in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php on line 9
+[07-Nov-2026 11:40:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins/sky-baseline/sky-baseline.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php:9
+Stack trace:
+#0 C:\Users\Гульнара\Local Sites\Elina\app\public\wp-settings.php(508): include_once()
+#1 C:\Users\Гульнара\Local Sites\Elina\app\public\wp-config.php(103): require_once('C:\\Users\\\xD0\x93\xD1\x83\xD0\xBB...')
+#2 C:\Users\Гульнара\Local Sites\Elina\app\public\wp-load.php(50): require_once('C:\\Users\\\xD0\x93\xD1\x83\xD0\xBB...')
+#3 C:\Users\Гульнара\Local Sites\Elina\app\public\wp-blog-header.php(13): require_once('C:\\Users\\\xD0\x93\xD1\x83\xD0\xBB...')
+#4 C:\Users\Гульнара\Local Sites\Elina\app\public\index.php(17): require('C:\\Users\\\xD0\x93\xD1\x83\xD0\xBB...')
+#5 {main}
+  thrown in C:\Users\Гульнара\Local Sites\Elina\app\public\wp-content\mu-plugins\sky-loader.php on line 9
+[07-Nov-2026 12:51:44 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'php_imagick.dll' (tried: C:\localwp\AppData\Roaming\Local\lightning-services\php-8.2.29+0\bin\win64\ext\php_imagick.dll (Не найден указанный модуль), C:\localwp\AppData\Roaming\Local\lightning-services\php-8.2.29+0\bin\win64\ext\php_php_imagick.dll.dll (Не найден указанный модуль)) in Unknown on line 0
